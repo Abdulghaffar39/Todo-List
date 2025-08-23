@@ -1,5 +1,4 @@
-var input = document.querySelector(`#input`);
-var ol = document.querySelector(`#ordered_list`);
+
 
 var arr = []
 
@@ -28,6 +27,8 @@ function edittodo(index){
 
 
 function randertodo(){
+    var input = document.querySelector(`#input`);
+    var ol = document.querySelector(`#ordered_list`);
     
     ol.innerHTML = ``;
     
