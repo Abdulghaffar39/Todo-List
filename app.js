@@ -37,99 +37,59 @@
 
 function submit() {
 
-    let input = document.getElementById('input').value;
+    let input = document.getElementById('input');
     let ordered_list = document.getElementById('ordered_list');
 
-    if(input.value === ''){
+    if (input.value === '') {
 
         alert('Please insert value');
         return;
     }
-    
-    for(let i = 0; i < input.length; i++){
-        
-        
-        ordered_list.innerHTML += `<li>${input}
-        <button>Edit</button>
-        <button>Delete</button>
-        </li>`
-        
-        
-        input = ''
-    }
+
+
+    let textSpan = document.createElement('span');
+    textSpan.textContent = input.value + " ";
+    todo_Value.appendChild(textSpan);
 
 
 
-    // let todo_Value = document.createElement('li');
-    // todo_Value.appendChild(document.createTextNode(input.value));
-    // ordered_list.appendChild(todo_Value)
+    let todo_Value = document.createElement('li');
+    let textNode = document.createTextNode(input.value + ' ');
+    todo_Value.appendChild(textNode)
+    ordered_list.appendChild(todo_Value);
 
-    
-    
-    // // function Edit todo list 
-    // let todo_EditButton = document.createElement('Button');
-    // todo_EditButton.appendChild(document.createTextNode('Edit'));
-    // ordered_list.appendChild(todo_EditButton);
 
-    // todo_EditButton.onclick = function () {
-        
-    //     let change_Value = prompt('Change todo item');
-    //     todo_Value.innerHTML = change_Value
-        
-    // };
-    // ordered_list.appendChild(todo_EditButton)
-    
-    
-    
-    // // function Delete todo list
-    // let todo_DeleteButton = document.createElement('Button');
-    // todo_DeleteButton.appendChild(document.createTextNode('Delete'));
-    // ordered_list.appendChild(todo_DeleteButton);
+    // function Edit todo list 
+    let todo_EditButton = document.createElement('Button');
+    todo_EditButton.textContent = 'Edit ';
 
-    // todo_DeleteButton.onclick = function () {
 
-    //     todo_Value.remove()
+    todo_EditButton.onclick = function () {
 
-    // };
-    // ordered_list.appendChild(todo_DeleteButton)
+        let change_Value = prompt('Change todo item');
+        todo_Value.innerHTML = change_Value
+
+    };
+
+    todo_Value.appendChild(todo_EditButton)
 
 
 
-    // // edit_todo()
-    // // delete_todo()
+    // function Delete todo list
+    let todo_DeleteButton = document.createElement('Button');
+    todo_DeleteButton.textContent = 'Delete';
 
+
+    todo_DeleteButton.onclick = function () {
+
+        todo_Value.remove();
+
+    };
+
+    todo_Value.appendChild(todo_DeleteButton)
+
+
+
+    input.value = ''
 };
 
-
-// function edit_todo() {
-
-//     let todo_EditButton = document.createElement('Button');
-//     todo_EditButton.appendChild(document.createTextNode('Edit'));
-//     ordered_list.appendChild(todo_EditButton);
-
-//     todo_EditButton.onclick = function () {
-
-//         let change_Value = prompt('Change todo item');
-//         todo_Value.innerHTML = change_Value
-
-//     };
-
-//     ordered_list.appendChild(todo_EditButton)
-
-// };
-
-
-// function delete_todo() {
-
-//     let todo_DeleteButton = document.createElement('Button');
-//     todo_DeleteButton.appendChild(document.createTextNode('Delete'));
-//     ordered_list.appendChild(todo_DeleteButton);
-
-//     todo_DeleteButton.onclick = function () {
-
-
-//     };
-
-//     ordered_list.appendChild(todo_DeleteButton)
-
-// };
