@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
+
+    <link rel="stylesheet" href="./style.css">
+
 </head>
+
 <body>
 
     <!-- <input type="text" id="input">
@@ -15,14 +20,21 @@
 
     <div class="container_1">
 
-        <input type="text" name="" id="input">
-        <button id="submit" onclick="submit()">Submit</button>
+        <div class="child_1">
+            <h4>Add Todo</h4>
+        </div>
+
+        <div class="child_2">
+            <input type="text" id="text">
+            <button id="submit" onclick="submit()">Submit</button>
+        </div>
 
     </div>
     
-    <ol id="ordered_list"></ol>
+    <div class="Result" id="Result"></div>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>

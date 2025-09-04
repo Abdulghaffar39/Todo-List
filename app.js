@@ -34,62 +34,35 @@
 // }
 
 
+function submit(){
 
-function submit() {
+    let todoText = document.getElementById('text').value;
+    let todoResult = document.getElementById('Result');
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+    let text = document.createTextNode(todoText);
+    let editButton = document.createElement('button');
+    let edit = document.createTextNode('Edit');
+    let deleteButton = document.createElement('button');
+    let del = document.createTextNode('Delete');
 
-    let input = document.getElementById('input');
-    let ordered_list = document.getElementById('ordered_list');
+    editButton.addEventListener('click' , (Event) => {
 
-    if (input.value === '') {
+        let editValue = prompt('Edit your Value');
+        li.innerHTML = editValue
+        
+    });
 
-        alert('Please insert value');
-        return;
-    }
+    deleteButton.addEventListener('click' , (Event) => {
 
+        ul.remove(li);
+        
+    });
 
-    let textSpan = document.createElement('span');
-    textSpan.textContent = input.value + " ";
-    todo_Value.appendChild(textSpan);
+    deleteButton.appendChild(del);
+    editButton.appendChild(edit);
+    li.appendChild(text);
+    ul.append(li , editButton , deleteButton);
+    todoResult.appendChild(ul);
 
-
-
-    let todo_Value = document.createElement('li');
-    let textNode = document.createTextNode(input.value + ' ');
-    todo_Value.appendChild(textNode)
-    ordered_list.appendChild(todo_Value);
-
-
-    // function Edit todo list 
-    let todo_EditButton = document.createElement('Button');
-    todo_EditButton.textContent = 'Edit ';
-
-
-    todo_EditButton.onclick = function () {
-
-        let change_Value = prompt('Change todo item');
-        todo_Value.innerHTML = change_Value
-
-    };
-
-    todo_Value.appendChild(todo_EditButton)
-
-
-
-    // function Delete todo list
-    let todo_DeleteButton = document.createElement('Button');
-    todo_DeleteButton.textContent = 'Delete';
-
-
-    todo_DeleteButton.onclick = function () {
-
-        todo_Value.remove();
-
-    };
-
-    todo_Value.appendChild(todo_DeleteButton)
-
-
-
-    input.value = ''
-};
-
+}
