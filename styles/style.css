@@ -9,6 +9,7 @@ body {
 
     overflow: hidden;
     font-family: 'poppins';
+    color: var(--color-white) !important;
     background-color: var(--bg-dark) !important;
 }
 
@@ -54,14 +55,108 @@ body {
     right: 0px;
 }
 
-/* Index.html ended */
+/* welcome.html ended */
+.welcomeContainer_1{
 
+    width: 100%;
+    height: 100%;
 
-@media (max-width: 425px) {
-
-    /* Index.html started */
-
-    /* Index.html ended */
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
 }
+
+.welcomeContainer_1 .child_1 img{
+
+    margin: 0 auto;
+    display: flex;
+}  
+
+.welcomeContainer_1 .child_1 img{
+
+    width: 400px;
+    height: 444.83px;
+}  
+
+.welcomeContainer_1 .child_1 h1{
+
+    font-weight: 700;
+    font-size: 56px;
+}   
+
+.welcomeContainer_1 .child_2 img{
+
+    width: 40px;
+    height: 8px;
+    
+}   
+
+.welcomeContainer_1 .child_3{
+
+    display: flex;
+    flex-direction: column;
+}   
+
+.welcomeContainer_1 .child_3 a{
+
+    width: 380px;
+    height: 55px;
+}   
+
+.welcomeContainer_1 .child_3 a .next{
+
+    width: 380px;
+    height: 55px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-white);
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--bg-blue);    
+    box-shadow: 0px 0px 40px 0px #8870FF4D;
+}   
+
+.welcomeContainer_1 .child_3 a .next:hover{
+
+    font-size: 28px;
+    font-weight: 500;
+    border-radius: 8px;
+    border-style: none;
+    color: var(--color-blue);
+    border: 1px solid var(--bg-blue);
+    background-color: transparent;    
+    box-shadow: none;
+    
+}   
+
+.welcomeContainer_1 .child_3 a .skip{
+
+    width: 380px;
+    height: 55px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 8px;
+    border-style: none;
+    color: var(--color-blue);
+    border: 1px solid var(--bg-blue);
+    background-color: transparent;    
+    box-shadow: none;
+    
+}   
+
+.welcomeContainer_1 .child_3 a .skip:hover{
+
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--color-white);
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--bg-blue);    
+    box-shadow: 0px 0px 40px 0px #8870FF4D;
+    
+}   
+
+/* welcome.html ended */
+
