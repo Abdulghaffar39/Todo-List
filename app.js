@@ -1,4 +1,4 @@
-function submit(){
+function submit() {
 
     let todoText = document.getElementById('text').value;
     let todoResult = document.getElementById('Result');
@@ -10,23 +10,24 @@ function submit(){
     let deleteButton = document.createElement('button');
     let del = document.createTextNode('Delete');
 
-    editButton.addEventListener('click' , (Event) => {
+    editButton.addEventListener('click', (Event) => {
 
         let editValue = prompt('Edit your Value');
         li.innerHTML = editValue
-        
+
     });
 
-    deleteButton.addEventListener('click' , (Event) => {
+    deleteButton.addEventListener('click', (Event) => {
 
         ul.remove(li);
-        
+
     });
 
     deleteButton.appendChild(del);
     editButton.appendChild(edit);
     li.appendChild(text);
-    ul.append(li , editButton , deleteButton);
+    ul.append(li, editButton, deleteButton);
     todoResult.appendChild(ul);
 
 }
+
