@@ -1,0 +1,83 @@
+/* fonts started */
+@font-face {
+    font-family: 'poppins';
+    src: url(../Assets/fonts/poppins/Poppins-Regular.ttf);
+}
+
+.poppins {
+    font-family: 'poppins';
+}
+/* fonts ended */
+
+/* bg-color started */
+
+:root {
+
+    --bg-dark: #121212;
+    --bg-black: rgb(33, 31, 32);
+    --bg-white: #fbfbfb;
+    --bg-blue: #8870ff;
+    --bg-gray: #E6E6E6;
+
+}
+
+.bg-blue {
+    background-color: var(--bg-blue);
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.bg-white {
+    background-color: var(--bg-white);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+/* bg-color ended */
+
+
+
+/* color started */
+:root {
+
+    --color-dark: #121212;
+    --color-black: rgb(33, 31, 32);
+    --color-white: #fbfbfb;
+    --color-blue: rgb(114, 139, 173);
+    --color-gray: #E6E6E6;
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+.color-gray {
+    color: var(--color-gray);
+}
+
+.color-dark {
+    color: var(--color-dark);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+
+/* color ended */
+
+
+/* z-index started */
+#z-1 {
+    z-index: 1000 !important;
+}
+
+#z-0 {
+    z-index: -1000 !important;
+}
+
+/* z-index ended */

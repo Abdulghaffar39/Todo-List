@@ -1,0 +1,38 @@
+
+/* universal selector started */
+/* *{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+} */
+/* universal selector ended */
+
+/* body started */
+body{
+
+    overflow: hidden;
+    font-family: 'poppins';
+    background-color: var(--bg-dark);
+
+}
+/* body ended */
+
+
+
+/* first Page styling started */
+
+.container_1 {
+   content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: rgba(138, 43, 226, 0.8);
+  filter: blur(80px);
+}
+
+
+/* first Page styling ended */
