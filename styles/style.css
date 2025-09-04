@@ -83,7 +83,6 @@ body {
 
     margin: 0 auto;
     display: flex;
-    animation: delay;
     animation-name: imgRotate;
     animation-duration: 3s;
     animation-delay: 1s; 
@@ -215,7 +214,7 @@ body {
 .manageContainer_1 {
 
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -227,27 +226,45 @@ body {
 
 .manageContainer_1 .child_1 {
 
+    width: 30%;
     margin-top: 20px;
+    text-align: center;
 }
 
 .manageContainer_1 .child_1 img {
 
     margin: 0 auto;
     display: flex;
-    transform: rotateY(360deg);
+    margin-bottom: 40px;
 
+    animation-name: object;
+    animation-delay: 1s; 
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+        
+}
+
+@keyframes object {
+    
+    0%{
+        transform: rotateY(360deg);
+    }
+    100%{
+        transform: rotateY(-360deg);
+    }
 }
 
 .manageContainer_1 .child_1 img {
 
-    width: 280px;
-    height: 197.83px;
+    width: 380px;
 }
 
 .manageContainer_1 .child_1 h1 {
 
     font-weight: 700;
-    font-size: 56px;
+    font-size: 40px;
 }
 
 .manageContainer_1 .child_2 img {
@@ -330,6 +347,34 @@ body {
     
 
 /*================================= welcome.html started ===================================*/
+
+.box_top {
+    
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-blue);
+    filter: blur(120px);
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.box_bottom {
+    
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-blue);
+    filter: blur(120px);
+    
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
 .welcomeContainer_1 {
 
     width: 100%;
@@ -345,6 +390,7 @@ body {
 .welcomeContainer_1 .child_1 {
 
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .welcomeContainer_1 .child_1 img {
@@ -361,13 +407,92 @@ body {
 }
 
 /*================================= welcome.html ended ===================================*/
+
+
+/*================================= manage.html started ===================================*/
+
+.box_top {
+    
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-blue);
+    filter: blur(120px);
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 
-@media (max-width: 600px) {
+.box_bottom {
+    
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-blue);
+    filter: blur(120px);
+    
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.manageContainer_1 {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+}
+
+.manageContainer_1 .child_1 {
+
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.manageContainer_1 .child_1 img {
+
+    width: 340px;
+    height: 374.83px;
+}
+
+.manageContainer_1 .child_3 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+/*================================= manage.html ended ===================================*/
+}
+
+
+@media (max-width:  768px) {
     
 
 /*================================= welcome.html started ===================================*/
+
+.box_top {
+    
+    width: 120px;
+    height: 120px;
+}
+
+
+.box_bottom {
+    
+    width: 120px;
+    height: 120px;
+}
+
+
 .welcomeContainer_1 {
 
     width: 100%;
@@ -377,7 +502,165 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 80px;
+    gap: 30px;
+}
+
+.welcomeContainer_1 .child_1 {
+
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.welcomeContainer_1 .child_1 img {
+
+    width: 300px;
+    height: 334.83px;
+}
+
+.welcomeContainer_1 .child_1 h1 {
+
+    font-size: 45px;
+}
+
+.welcomeContainer_1 .child_3 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 1000;
+}
+
+.welcomeContainer_1 .child_3 a {
+
+    width: 300px;
+    height: 55px;
+}
+
+.welcomeContainer_1 .child_3 a .next {
+
+    width: 300px;
+    height: 55px;
+
+}
+
+.welcomeContainer_1 .child_3 a .skip {
+
+    width: 300px;
+    height: 55px;
+
+}
+
+/*================================= welcome.html ended ===================================*/
+    
+
+/*================================= manage.html started ===================================*/
+
+.box_top {
+    
+    width: 120px;
+    height: 120px;
+}
+
+
+.box_bottom {
+    
+    width: 120px;
+    height: 120px;
+}
+
+
+.manageContainer_1 {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 35px;
+}
+
+.manageContainer_1 .child_1 {
+
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.manageContainer_1 .child_1 img {
+
+    width: 260px;
+    height: 194.83px;
+}
+
+.manageContainer_1 .child_1 h1 {
+
+    font-size: 35px;
+}
+
+.manageContainer_1 .child_3 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 1000;
+}
+
+.manageContainer_1 .child_3 a {
+
+    width: 300px;
+    height: 55px;
+}
+
+.manageContainer_1 .child_3 a .next {
+
+    width: 300px;
+    height: 55px;
+
+}
+
+.manageContainer_1 .child_3 a .skip {
+
+    width: 300px;
+    height: 55px;
+
+}
+
+/*================================= manage.html ended ===================================*/
+}
+
+
+@media (max-width: 600px) {
+    
+
+/*================================= welcome.html started ===================================*/
+
+
+.box_top {
+    
+    width: 80px;
+    height: 80px;
+}
+
+
+.box_bottom {
+    
+    width: 80px;
+    height: 80px;
+}
+
+
+.welcomeContainer_1 {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
 }
 
 .welcomeContainer_1 .child_1 {
@@ -387,8 +670,8 @@ body {
 
 .welcomeContainer_1 .child_1 img {
 
-    width: 300px;
-    height: 334.83px;
+    width: 200px;
+    height: 234.83px;
 }
 
 .welcomeContainer_1 .child_1 h1 {
@@ -405,6 +688,65 @@ body {
 }
 
 /*================================= welcome.html ended ===================================*/
+    
+
+/*================================= manage.html started ===================================*/
+
+
+.box_top {
+    
+    width: 80px;
+    height: 80px;
+}
+
+
+.box_bottom {
+    
+    width: 80px;
+    height: 80px;
+}
+
+
+
+
+.manageContainer_1 {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+}
+
+.manageContainer_1 .child_1 {
+
+    width: 80%;
+    margin-top: 60px;
+}
+
+.manageContainer_1 .child_1 img {
+
+    width: 180px;
+    height: 204.83px !important;
+}
+
+.manageContainer_1 .child_1 h1 {
+
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.manageContainer_1 .child_3 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+/*================================= manage.html ended ===================================*/
 
 }
 
@@ -422,7 +764,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 120px;
+    gap: 20px;
 }
 
 .welcomeContainer_1 .child_1 {
@@ -509,6 +851,81 @@ body {
 
 }
 /*================================= welcome.html ended ===================================*/
+    
+
+/*================================= manage.html started ===================================*/
+.manageContainer_1 {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.manageContainer_1 .child_1 {
+
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.manageContainer_1 .child_1 img {
+
+    width: 280px;
+    height: 314.83px;
+}
+
+.manageContainer_1 .child_1 h1 {
+
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.manageContainer_1 .child_3 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.manageContainer_1 .child_3 a {
+
+    width: 300px;
+    height: 44px;
+}
+
+.manageContainer_1 .child_3 a .next {
+
+    width: 300px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-white);
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--bg-blue);
+    box-shadow: 0px 0px 40px 0px #8870FF4D;
+}
+
+.manageContainer_1 .child_3 a .skip {
+
+    width: 300px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    border-style: none;
+    color: var(--color-blue);
+    border: 1px solid var(--bg-blue);
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+/*================================= manage.html ended ===================================*/
 
 }
 
@@ -526,7 +943,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 120px;
+    gap: 40px;
 }
 
 .welcomeContainer_1 .child_1 {
@@ -566,5 +983,57 @@ body {
 }
 
 /*================================= welcome.html ended ===================================*/
+    
+
+/*================================= manage.html started ===================================*/
+.manageContainer_1 {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.manageContainer_1 .child_1 {
+
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.manageContainer_1 .child_1 img {
+
+    width: 250px;
+    height: 264.83px;
+}
+
+.manageContainer_1 .child_1 h1 {
+
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.manageContainer_1 .child_3 a {
+
+    width: 260px;
+    height: 38px;
+}
+
+.manageContainer_1 .child_3 a .next {
+
+    width: 260px;
+    height: 38px;
+}
+
+.manageContainer_1 .child_3 a .skip {
+
+    width: 260px;
+    height: 38px;
+}
+
+/*================================= manage.html ended ===================================*/
 
 }
