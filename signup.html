@@ -19,12 +19,11 @@
     <div class="box_top"></div>
     <div class="box_bottom"></div>
 
-    <div class="logo">
+    <div class="logo" id="signUpLogo">
         <img src="./Assets/Images/Digital logo.png" width="100px" alt="logo">
     </div>
 
-
-    <div class="loginContainer_1">
+    <div class="signUpContainer_1">
 
         <div class="parent_1">
             <h1>Welcome Back</h1>
@@ -35,17 +34,33 @@
 
             <form>
 
-                <label for="email">Email</label>
-                <input type="email" id="loginEmail" placeholder="AbdulGhaffar@example.com">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" placeholder="Abdul Ghaffar">
+
+                <label for="signUpEmail">Email</label>
+                <input type="email" id="signUpEmail" placeholder="AbdulGhaffar@example.com">
+
+                <div class="passwordBox">
+                    
+                    <div>
+                        <label for="signUpPassword">Password</label>
+                    </div>
+
+                    <div class="passwordIconBox">
+                        <div class="inputBox"><input type="password" id="signUpPassword" placeholder="Enter Your Password"></div>
+                        <div class="iconBox"><img src="./Assets/Images/eye.png" id="eyeIcon" class="eyeIcon" alt="Eye"></div>
+                    </div>
+
+                </div>
 
                 <div class="passwordBox">
 
                     <div>
-                        <label for="password">Password</label>
+                        <label for="confirmPassword">Confirm Password</label>
                     </div>
 
                     <div class="passwordIconBox">
-                        <div class="inputBox"><input type="password" id="loginPassword" placeholder="Enter Your Password"></div>
+                        <div class="inputBox"><input type="password" id="confirmPassword" placeholder="Enter Your Password"></div>
                         <div class="iconBox"><img src="./Assets/Images/eye.png" id="eyeIcon" class="eyeIcon" alt="Eye"></div>
                     </div>
 

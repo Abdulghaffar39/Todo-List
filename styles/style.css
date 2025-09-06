@@ -762,6 +762,328 @@ body {
 /*=================================== login.html ended =====================================*/
 
 
+/*=================================== Sign up.html started =====================================*/
+
+.logo {
+
+    margin: 10px 0px 30px 0px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signUpLogo {
+
+    margin: 10px 0px 30px 0px;
+
+}
+
+.signUpContainer_1 {
+
+    width: 70%;
+    margin: 0 auto;
+}
+
+.signUpContainer_1 .parent_1 {
+
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_1 h1 {
+
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.signUpContainer_1 .parent_2 form {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.signUpContainer_1 .parent_2 form label {
+
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form input {
+
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    border: 1px solid var(--bg-gray);
+    background-color: transparent !important;
+}
+
+.signUpContainer_1 .parent_2 form input:hover {
+    
+    outline: var(--bg-blue);
+    border: 1px solid var(--bg-blue);
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
+    
+    
+    display: flex;
+    border-radius: 6px;
+    flex-direction: row;
+    margin-bottom: 3px;
+    justify-content: space-between;
+    border: 1px solid var(--bg-gray);
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox:hover{
+
+    outline: var(--bg-blue);
+    border: 1px solid var(--bg-blue);
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox .inputBox{
+    
+    width: 100%;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox .iconBox{
+    
+    position: relative;
+    right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox #loginPassword{  
+    
+    border: none;
+    outline: none;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox img{
+    
+    border-style: none;
+    background-color: transparent;
+
+    position: relative;
+    right: 33px;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox div #eyeIcon{
+
+    cursor: pointer;
+
+    position:sticky;
+    top: -34.5px;
+    left: 970px;
+    right: 270px;
+
+}
+
+/* Autofill background remove */
+.signUpContainer_1 .parent_2 form input:-webkit-autofill,
+.signUpContainer_1 .parent_2 form input:-webkit-autofill:focus,
+.signUpContainer_1 .parent_2 form input:-webkit-autofill:hover,
+.signUpContainer_1 .parent_2 form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: var(--text-color, white) !important; /* text ka color reset */
+    transition: background-color 5000s ease-in-out 0s; /* autofill ka white flash hide */
+}
+
+.signUpContainer_1 .parent_2 form #signUpPassword {
+
+    border: none;
+    outline: none;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form #confirmPassword {
+
+    border: none;
+    outline: none;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form #Forget {
+
+    width: 100%;
+    text-align: end;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox {
+
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px 15px 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox a button {
+
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    border-style: none;
+    border-radius: 8px;
+    color: var(--color-white);
+    background-color: var(--bg-blue);
+    box-shadow: 0px 0px 10px 0px #8870FF4D;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox a button:hover {
+
+    font-size: 26px;
+    box-shadow: none;
+    transition: all 1s ease;
+    color: var(--color-blue);
+    background-color: transparent;
+    border: 1px solid var(--bg-blue);
+}
+
+.signUpContainer_1 .parent_2 form button:hover {
+
+    font-size: 28px;
+    font-weight: 500;
+    box-shadow: none;
+    border-radius: 8px;
+    border-style: none;
+    color: var(--color-blue);
+    background-color: transparent;
+    border: 1px solid var(--bg-blue);
+
+}
+
+.signUpContainer_1 .parent_2 form .dottedLineBox {
+
+    width: 100%;
+    height: 0px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signUpContainer_1 .parent_2 form .dottedLine {
+
+    border: 1.8px dotted var(--color-gray);
+    
+}
+
+.signUpContainer_1 .parent_2 form .dottedLineBox .or {
+    
+    width: 50px;
+    margin: 0 auto;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 18px;
+    background-color: var(--bg-dark);
+    
+    position: relative;
+    top: -15px;
+    font-size: 18px;
+
+}
+
+.signUpContainer_1 .parent_3 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 10px;
+}
+
+.signUpContainer_1 .parent_3 h2 {
+
+    font-size: 24px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox {
+
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div {
+
+    width: 137px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--bg-gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div div{
+
+    display: flex;
+    flex-direction: row;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div div a{
+
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div div a button{
+
+    font-size: 18px;
+    border-style: none;
+    color: var(--color-gray);
+    background-color: transparent;
+}
+
+.signUpContainer_1 .parent_3 .need {
+
+    width: 100%;   
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.signUpContainer_1 .parent_3 .need p{
+    
+    height: 30px;
+    font-size: 16px;    
+}
+
+.signUpContainer_1 .parent_3 .need p span{
+
+    font-size: 18px;    
+}
+
+.signUpContainer_1 .parent_3 .need p span a{
+
+    text-decoration: none;
+}
+
+
+/*=================================== Sign up.html ended =====================================*/
+
+
 @media (max-width: 1440px) {
 
 /*=================================== login.html started =====================================*/
@@ -1083,6 +1405,75 @@ body {
 /*=================================== login.html ended =====================================*/
 
 
+/*=================================== Sign up.html started =====================================*/
+
+.logo {
+
+    margin: 5px 0px 0px 0px;
+}
+
+#signUpLogo img{
+    
+    width: 80px;
+}
+
+.signUpContainer_1 .parent_1 h1 {
+    
+    font-size: 28px;
+}
+
+.signUpContainer_1 .parent_2 form label {
+
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form input {
+
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
+    
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox {
+
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox a button {
+
+    height: 40px;
+}
+
+.signUpContainer_1 .parent_3 {
+
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.signUpContainer_1 .parent_3 h2 {
+
+    font-size: 20px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox {
+
+    gap: 20px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div div a button{
+    
+    font-size: 14px;
+}
+
+/*=================================== Sign up.html ended =====================================*/
+
 }
 
 
@@ -1096,7 +1487,7 @@ body {
         width: 120px;
         height: 120px;
     }
-
+    
 
     .box_bottom {
 
@@ -1764,18 +2155,15 @@ body {
     font-size: 22px;
 }
 
-
 .loginContainer_1 .parent_1 h1 {
 
     font-size: 28px;
 }
 
-
 .loginContainer_1 .parent_2 form label {
 
     font-size: 20px;
 }
-
 
 .loginContainer_1 .parent_2 form .loginBox {
 
@@ -1784,6 +2172,80 @@ body {
 
 /*=================================== login.html ended =====================================*/
 
+
+/*=================================== Sign up.html started =====================================*/
+
+.logo {
+
+    margin: 5px 0px 0px 0px;
+}
+
+#signUpLogo img{
+    
+    width: 80px;
+}
+
+.signUpContainer_1{
+    
+    width: 90%;
+}
+
+.signUpContainer_1 .parent_1 h1 {
+    
+    font-size: 28px;
+}
+
+.signUpContainer_1 .parent_2 form label {
+
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form input {
+
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
+    
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox {
+
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox a button {
+
+    height: 40px;
+}
+
+.signUpContainer_1 .parent_3 {
+
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.signUpContainer_1 .parent_3 h2 {
+
+    font-size: 20px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox {
+
+    gap: 20px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div div a button{
+    
+    font-size: 14px;
+}
+
+/*=================================== Sign up.html ended =====================================*/
 
 }
 
@@ -2000,5 +2462,81 @@ body {
 }
 
 /*=================================== login.html ended =====================================*/
+
+
+/*=================================== Sign up.html started =====================================*/
+
+.logo {
+
+    margin: 5px 0px 0px 0px;
+}
+
+#signUpLogo img{
+    
+    width: 80px;
+}
+
+.signUpContainer_1{
+    
+    width: 95%;
+}
+
+.signUpContainer_1 .parent_1 h1 {
+    
+    font-size: 28px;
+}
+
+.signUpContainer_1 .parent_2 form label {
+
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form input {
+
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
+    
+    margin-bottom: 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox {
+
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+}
+
+.signUpContainer_1 .parent_2 form .loginBox a button {
+
+    height: 40px;
+}
+
+.signUpContainer_1 .parent_3 {
+
+    padding: 5px 0px;
+    gap: 5px;
+}
+
+.signUpContainer_1 .parent_3 h2 {
+
+    font-size: 20px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox {
+
+    gap: 20px;
+}
+
+.signUpContainer_1 .parent_3 .buttonBox div div a button{
+    
+    font-size: 14px;
+}
+
+/*=================================== Sign up.html ended =====================================*/
+
 
 }
