@@ -16,7 +16,9 @@
 
 <body>
 
-    
+    <div class="box_top"></div>
+    <div class="box_bottom"></div>
+
     <div class="logo">
         <img src="./Assets/Images/Digital logo.png" width="100px" alt="logo">
     </div>
@@ -24,7 +26,9 @@
 
     <div class="loginContainer_1">
 
-        <div class="parent_1"><h1>Welcome Back</h1></div>
+        <div class="parent_1">
+            <h1>Welcome Back</h1>
+        </div>
 
 
         <div class="parent_2">
@@ -32,10 +36,20 @@
             <form>
 
                 <label for="email">Email</label>
-                <input type="email" id="loginEmail" placeholder="abdul@example.com">
+                <input type="email" id="loginEmail" placeholder="AbdulGhaffar@example.com">
 
-                <label for="password">Password</label>
-                <input type="password" id="loginPassword" placeholder="Enter Your Password" src="./Assets/Images/eye.png">
+                <div class="passwordBox">
+
+                    <div>
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="passwordIconBox">
+                        <div class="inputBox"><input type="password" id="loginPassword" placeholder="Enter Your Password"></div>
+                        <div class="iconBox"><img src="./Assets/Images/eye.png" id="eyeIcon" class="eyeIcon" alt="Eye"></div>
+                    </div>
+
+                </div>
 
                 <a href="#" id="Forget">Forget password?</a>
 
@@ -60,12 +74,33 @@
 
             <div class="buttonBox">
 
-                <div class="googleBox"><button class="google"></button></div>
-                <div class="facebookBox"><button class="facebook"></button></div>
+                <div class="googleBox">
+
+                    <div class="google">
+                        <a href="https://github.com/Abdulghaffar39" target="_blank">
+                            <img src="./Assets/Images/google.png" width="36px" alt="Google">
+                            <button class="google">Google</button>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="googleBox" href="https://www.facebook.com/profile.php?id=61577270151281">
+
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61577270151281" target="_blank">
+                            <img src="./Assets/Images/facebook.png" style="padding: 5px;" width="36px" alt="Facebook">
+                            <button class="facebook">Facebook</button>
+                        </a>
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="need"><p>Need an Account ?<span>Sign Up</span></p></div>
+            <div class="need">
+                <p>Need an Account ?<span><a href="#">Sign Up</a></span></p>
+            </div>
 
         </div>
 

@@ -31,3 +31,24 @@ function submit() {
 
 }
 
+// =============================== Login Started ============================================
+const loginPassword = document.getElementById("loginPassword");
+const eyeIcon = document.getElementById("eyeIcon");
+
+eyeIcon.addEventListener("click", () => {
+
+  if (loginPassword.type === "password") {
+
+    loginPassword.type = "text";
+    eyeIcon.textContent = "🙈"; 
+
+  } else {
+
+    loginPassword.type = "password";
+    eyeIcon.textContent = "👁️"; 
+
+  }
+});
+
+
+// =============================== Login Ended ==============================================
