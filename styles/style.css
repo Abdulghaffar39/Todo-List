@@ -566,7 +566,7 @@ body {
     right: 33px;
 }
 
-.loginContainer_1 .parent_2 form .passwordBox div #eyeIcon{
+.loginContainer_1 .parent_2 form .passwordBox div .eyeIcon{
 
     cursor: pointer;
 
@@ -608,6 +608,19 @@ body {
 }
 
 .loginContainer_1 .parent_2 form .loginBox a button {
+
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 8px;
+    border-style: none;
+    color: var(--color-white);
+    background-color: var(--bg-blue);
+    box-shadow: 0px 0px 40px 0px #8870FF4D;
+}
+
+.loginContainer_1 .parent_2 form .loginBox a button input{
 
     width: 100%;
     height: 50px;

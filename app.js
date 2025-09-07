@@ -45,7 +45,12 @@ function signUp(e) {
   if (userName === '' || signUpEmail === '' || signUpPassword === '' || confirmPassword === '') {
 
     alert('Please enter value');
-    return
+    return;
+  }
+  else if (signUpPassword !== confirmPassword) {
+
+    alert('Match correct password!');
+    return;
   }
 
   let obj = JSON.parse(window.localStorage.getItem('SignUp')) || [];
@@ -59,6 +64,8 @@ function signUp(e) {
   });
 
   window.localStorage.setItem('SignUp', JSON.stringify(obj));
+
+  window.location.href = 'login.html';
 
   document.getElementById("signUpForm").reset();
 }
@@ -95,5 +102,40 @@ confirmEyeIcon.addEventListener("click", () => {
 
 
 // =============================== Login Started ============================================
+
+
+function login(e) {
+
+  e.preventDefault()
+
+  console.log('alksdfjjsafdhsalkfd');
+
+
+}
+
+
+const loginPassword = document.getElementById("loginPassword");
+const loginEyeIcon = document.getElementById("loginEyeIcon");
+
+loginEyeIcon.addEventListener("click", () => {  // yahi sahi hai
+
+  if (loginPassword.type === "password") {
+
+    loginPassword.type = "text";
+
+  } else {
+
+    loginPassword.type = "password";
+    
+  }
+});
+
+
+loginEyeIcon.addEventListener("click", () => {
+  logtogglePass(loginPassword);
+});
+
+
+
 
 // =============================== Login Ended ==============================================
