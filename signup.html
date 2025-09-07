@@ -32,7 +32,7 @@
 
         <div class="parent_2">
 
-            <form>
+            <form onsubmit="signUp(event)" id="signUpForm">
 
                 <label for="userName">User Name</label>
                 <input type="text" id="userName" placeholder="Abdul Ghaffar">
@@ -72,7 +72,7 @@
                 <a href="#" id="Forget">Forget password?</a>
 
                 <div class="loginBox">
-                    <a href="#"><button>Log in</button></a>
+                    <a href="#"><button><input type="submit" value="Sign Up"></button></a>
                 </div>
 
                 <div class="dottedLineBox">
@@ -126,38 +126,6 @@
 
 
     <script src="app.js"></script>
-    <script>
-
-
-        const signUpPassword = document.getElementById("signUpPassword");
-        const signUpEyeIcon = document.getElementById("signUpEyeIcon");
-
-        const confirmPassword = document.getElementById("confirmPassword");
-        const confirmEyeIcon = document.getElementById("confirmEyeIcon");
-
-        function togglePassword(input) {
-
-            if (input.type === "password") {
-
-                input.type = "text";   // Show password
-            } 
-            else {
-
-                input.type = "password"; // Hide password
-            }
-        }
-
-        signUpEyeIcon.addEventListener("click", () => {
-            togglePassword(signUpPassword);
-        });
-
-        confirmEyeIcon.addEventListener("click", () => {
-            togglePassword(confirmPassword);
-        });
-
-    </script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>

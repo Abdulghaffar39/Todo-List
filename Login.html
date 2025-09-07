@@ -45,8 +45,10 @@
                     </div>
 
                     <div class="passwordIconBox">
-                        <div class="inputBox"><input type="password" id="loginPassword" placeholder="Enter Your Password"></div>
-                        <div class="iconBox"><img src="./Assets/Images/eye.png" id="eyeIcon" class="eyeIcon" alt="Eye"></div>
+                        <div class="inputBox"><input type="password" id="loginPassword"
+                                placeholder="Enter Your Password"></div>
+                        <div class="iconBox"><img src="./Assets/Images/eye.png" id="eyeIcon" class="eyeIcon" alt="Eye">
+                        </div>
                     </div>
 
                 </div>
@@ -108,6 +110,26 @@
 
 
     <script src="app.js"></script>
+    <script>
+
+        const loginPassword = document.getElementById("loginPassword");
+        const eyeIcon = document.getElementById("eyeIcon");
+
+        eyeIcon.addEventListener("click", () => {
+
+            if (loginPassword.type === "password") {
+
+                loginPassword.type = "text";
+
+            } else {
+
+                loginPassword.type = "password";
+
+            }
+        });
+
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
