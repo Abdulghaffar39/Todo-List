@@ -893,9 +893,9 @@ body {
 }
 
 .signUpContainer_1 .parent_2 form .passwordBox div .eyeIcon{
-
+    
     cursor: pointer;
-
+    
     position:sticky;
     top: -34.5px;
     left: 970px;

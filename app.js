@@ -32,11 +32,8 @@ function submit() {
 }
 
 // =============================== Login Started ============================================
-const signUpPasswordloginPassword = document.getElementById("loginPassword");
+const loginPassword = document.getElementById("loginPassword");
 const eyeIcon = document.getElementById("eyeIcon");
-
-const signUpPassword = document.getElementById("signUpPassword");
-const signUpEyeIcon = document.getElementById("signUpEyeIcon");
 
 eyeIcon.addEventListener("click", () => {
 
@@ -49,20 +46,6 @@ eyeIcon.addEventListener("click", () => {
 
     loginPassword.type = "password";
     eyeIcon.textContent = "👁️"; 
-
-  }
-});
-
-
-signUpEyeIcon.addEventListener("click", () => {
-
-  if (signUpPassword.type === "password") {
-
-    signUpPassword.type = "text";
-
-  } else {
-
-    signUpPassword.type = "password";
 
   }
 });
