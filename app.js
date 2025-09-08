@@ -49,7 +49,7 @@ function signUp(e) {
   }
   else if (signUpPassword !== confirmPassword) {
 
-    alert('Match correct password!');
+    alert('Match password!');
     return;
   }
 
@@ -65,7 +65,7 @@ function signUp(e) {
 
   window.localStorage.setItem('SignUp', JSON.stringify(obj));
 
-  window.location.href = 'login.html';
+  window.location.href = 'Login.html';
 
   document.getElementById("signUpForm").reset();
 }
