@@ -71,28 +71,29 @@ function signUp(e) {
 }
 
 
-let signUpPassword = document.getElementById('signUpPassword');
-let confirmPassword = document.getElementById('confirmPassword');
-let signUpEyeIcon = document.getElementById("signUpEyeIcon");
-let confirmEyeIcon = document.getElementById("confirmEyeIcon");
+// let signUpPassword = document.getElementById('signUpPassword');
+// let confirmPassword = document.getElementById('confirmPassword');
+// let signUpEyeIcon = document.getElementById("signUpEyeIcon");
+// let confirmEyeIcon = document.getElementById("confirmEyeIcon");
 
-function togglePassword(input) {
+// function togglePassword(input) {
 
-  if (input.type === "password") {
+//   if (input.type === "password") {
 
-    input.type = "text";   // Show password
-  }
-  else {
+//     input.type = "text";   // Show password
+//   }
+//   else {
 
-    input.type = "password"; // Hide password
-  }
-}
-signUpEyeIcon.addEventListener("click", () => {
-  togglePassword(signUpPassword);
-});
-confirmEyeIcon.addEventListener("click", () => {
-  togglePassword(confirmPassword);
-});
+//     input.type = "password"; // Hide password
+//   }
+// }
+
+// signUpEyeIcon.addEventListener("click", () => {
+//   togglePassword(signUpPassword);
+// });
+// confirmEyeIcon.addEventListener("click", () => {
+//   togglePassword(confirmPassword);
+// });
 
 
 
@@ -108,34 +109,67 @@ function login(e) {
 
   e.preventDefault()
 
-  console.log('alksdfjjsafdhsalkfd');
+  let loginEmail = document.getElementById('loginEmail').value;
+  let loginPassword = document.getElementById('loginPassword').value;
 
 
-}
+  if (loginEmail === '' || loginPassword === '') {
+
+    alert('Please enter Email or Password');
+    return;
+  }
 
 
-const loginPassword = document.getElementById("loginPassword");
-const loginEyeIcon = document.getElementById("loginEyeIcon");
+  let getValue = JSON.parse(window.localStorage.getItem('SignUp'))
+  
+  let isFound = false;
 
-loginEyeIcon.addEventListener("click", () => {  // yahi sahi hai
+  for (let i = 0; i < getValue.length; i++) {
 
-  if (loginPassword.type === "password") {
+    if (getValue[i].signUpEmail === loginEmail && getValue[i].signUpPassword === loginPassword) {
 
-    loginPassword.type = "text";
+      alert('successfully!');
+      isFound = true;
+      window.location.href = 'todo.html'
+      break;
+    }
 
-  } else {
-
-    loginPassword.type = "password";
     
   }
-});
+  if (!isFound) {
+
+    alert('Incorrect Email or Password');
+    return;
+
+  }
 
 
-loginEyeIcon.addEventListener("click", () => {
-  logtogglePass(loginPassword);
-});
+
+  document.getElementById("loginForm").reset();
+}
+
+// function login() {
+
+//   const loginPassword = document.getElementById("loginPassword");
+//   const loginEyeIcon = document.getElementById("loginEyeIcon");
+
+//   function logtogglePass() {
+
+//     if (loginPassword.type === "password") {
+
+//       loginPassword.type = "text";
+
+//     } else {
+
+//       loginPassword.type = "password";
+
+//     }
+//   }
 
 
+//   loginEyeIcon.addEventListener("click", () => {
+//     logtogglePass(loginPassword);
+//   });
 
-
+// }
 // =============================== Login Ended ==============================================
