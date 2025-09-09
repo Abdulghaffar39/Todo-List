@@ -341,6 +341,7 @@ body {
     box-shadow: 0px 0px 40px 0px #8870FF4D;
 
 }
+
 /*=================================== manage.html ended =====================================*/
 
 
@@ -513,14 +514,14 @@ body {
 }
 
 .loginContainer_1 .parent_2 form input:hover {
-    
+
     outline: var(--bg-blue);
     border: 1px solid var(--bg-blue);
 }
 
-.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox{
-    
-    
+.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox {
+
+
     display: flex;
     border-radius: 6px;
     flex-direction: row;
@@ -529,19 +530,19 @@ body {
     border: 1px solid var(--bg-gray);
 }
 
-.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox:hover{
+.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox:hover {
 
     outline: var(--bg-blue);
     border: 1px solid var(--bg-blue);
 }
 
-.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox .inputBox{
-    
+.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox .inputBox {
+
     width: 100%;
 }
 
-.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox .iconBox{
-    
+.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox .iconBox {
+
     position: relative;
     right: 15px;
 
@@ -550,14 +551,14 @@ body {
     align-items: center;
 }
 
-.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox #loginPassword{  
-    
+.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox #loginPassword {
+
     border: none;
     outline: none;
 }
 
-.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox img{
-    
+.loginContainer_1 .parent_2 form .passwordBox .passwordIconBox img {
+
     border-style: none;
     background-color: transparent;
 
@@ -565,11 +566,11 @@ body {
     right: 33px;
 }
 
-.loginContainer_1 .parent_2 form .passwordBox div .eyeIcon{
+.loginContainer_1 .parent_2 form .passwordBox div .eyeIcon {
 
     cursor: pointer;
 
-    position:sticky;
+    position: sticky;
     top: -34.5px;
     left: 970px;
     right: 270px;
@@ -583,8 +584,10 @@ body {
 .loginContainer_1 .parent_2 form input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
     box-shadow: 0 0 0 1000px transparent inset !important;
-    -webkit-text-fill-color: var(--text-color, white) !important; /* text ka color reset */
-    transition: background-color 5000s ease-in-out 0s; /* autofill ka white flash hide */
+    -webkit-text-fill-color: var(--text-color, white) !important;
+    /* text ka color reset */
+    transition: background-color 5000s ease-in-out 0s;
+    /* autofill ka white flash hide */
 }
 
 .loginContainer_1 .parent_2 form #loginPassword {
@@ -619,7 +622,7 @@ body {
     box-shadow: 0px 0px 40px 0px #8870FF4D;
 }
 
-.loginContainer_1 .parent_2 form .loginBox a button input{
+.loginContainer_1 .parent_2 form .loginBox a button input {
 
     width: 100%;
     height: 50px;
@@ -669,18 +672,18 @@ body {
 .loginContainer_1 .parent_2 form .dottedLine {
 
     border: 1.8px dotted var(--color-gray);
-    
+
 }
 
 .loginContainer_1 .parent_2 form .dottedLineBox .or {
-    
+
     width: 50px;
     margin: 0 auto;
     font-weight: 400;
     text-align: center;
     border-radius: 18px;
     background-color: var(--bg-dark);
-    
+
     position: relative;
     top: -15px;
     font-size: 18px;
@@ -721,13 +724,13 @@ body {
     align-items: center;
 }
 
-.loginContainer_1 .parent_3 .buttonBox div div{
+.loginContainer_1 .parent_3 .buttonBox div div {
 
     display: flex;
     flex-direction: row;
 }
 
-.loginContainer_1 .parent_3 .buttonBox div div a{
+.loginContainer_1 .parent_3 .buttonBox div div a {
 
     width: 100%;
     height: 100%;
@@ -737,7 +740,7 @@ body {
     justify-content: space-around;
 }
 
-.loginContainer_1 .parent_3 .buttonBox div div a button{
+.loginContainer_1 .parent_3 .buttonBox div div a button {
 
     font-size: 18px;
     border-style: none;
@@ -748,24 +751,24 @@ body {
 
 .loginContainer_1 .parent_3 .need {
 
-    width: 100%;   
+    width: 100%;
     height: 30px;
     display: flex;
     justify-content: center;
 }
 
-.loginContainer_1 .parent_3 .need p{
-    
+.loginContainer_1 .parent_3 .need p {
+
     height: 30px;
-    font-size: 16px;    
+    font-size: 16px;
 }
 
-.loginContainer_1 .parent_3 .need p span{
+.loginContainer_1 .parent_3 .need p span {
 
-    font-size: 18px;    
+    font-size: 18px;
 }
 
-.loginContainer_1 .parent_3 .need p span a{
+.loginContainer_1 .parent_3 .need p span a {
 
     text-decoration: none;
 }
@@ -841,14 +844,14 @@ body {
 }
 
 .signUpContainer_1 .parent_2 form input:hover {
-    
+
     outline: var(--bg-blue);
     border: 1px solid var(--bg-blue);
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
-    
-    
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox {
+
+
     display: flex;
     border-radius: 6px;
     flex-direction: row;
@@ -857,19 +860,19 @@ body {
     border: 1px solid var(--bg-gray);
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox:hover{
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox:hover {
 
     outline: var(--bg-blue);
     border: 1px solid var(--bg-blue);
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox .inputBox{
-    
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox .inputBox {
+
     width: 100%;
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox .iconBox{
-    
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox .iconBox {
+
     position: relative;
     right: 15px;
 
@@ -878,14 +881,14 @@ body {
     align-items: center;
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox #loginPassword{  
-    
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox #loginPassword {
+
     border: none;
     outline: none;
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox img{
-    
+.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox img {
+
     border-style: none;
     background-color: transparent;
 
@@ -893,22 +896,22 @@ body {
     right: 33px;
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox div .eyeIcon{
+.signUpContainer_1 .parent_2 form .passwordBox div .eyeIcon {
 
     cursor: pointer;
 
-    position:sticky;
+    position: sticky;
     top: -34.5px;
     left: 970px;
     right: 270px;
 
 }
 
-.signUpContainer_1 .parent_2 form .passwordBox div .eyeIcon{
-    
+.signUpContainer_1 .parent_2 form .passwordBox div .eyeIcon {
+
     cursor: pointer;
-    
-    position:sticky;
+
+    position: sticky;
     top: -34.5px;
     left: 970px;
     right: 270px;
@@ -921,8 +924,10 @@ body {
 .signUpContainer_1 .parent_2 form input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
     box-shadow: 0 0 0 1000px transparent inset !important;
-    -webkit-text-fill-color: var(--text-color, white) !important; /* text ka color reset */
-    transition: background-color 5000s ease-in-out 0s; /* autofill ka white flash hide */
+    -webkit-text-fill-color: var(--text-color, white) !important;
+    /* text ka color reset */
+    transition: background-color 5000s ease-in-out 0s;
+    /* autofill ka white flash hide */
 }
 
 .signUpContainer_1 .parent_2 form #signUpPassword {
@@ -965,7 +970,7 @@ body {
     box-shadow: 0px 0px 10px 0px #8870FF4D;
 }
 
-.signUpContainer_1 .parent_2 form .loginBox a button input{
+.signUpContainer_1 .parent_2 form .loginBox a button input {
 
     width: 100%;
     height: 50px;
@@ -1003,18 +1008,18 @@ body {
 .signUpContainer_1 .parent_2 form .dottedLine {
 
     border: 1.8px dotted var(--color-gray);
-    
+
 }
 
 .signUpContainer_1 .parent_2 form .dottedLineBox .or {
-    
+
     width: 50px;
     margin: 0 auto;
     font-weight: 400;
     text-align: center;
     border-radius: 18px;
     background-color: var(--bg-dark);
-    
+
     position: relative;
     top: -15px;
     font-size: 18px;
@@ -1055,13 +1060,13 @@ body {
     align-items: center;
 }
 
-.signUpContainer_1 .parent_3 .buttonBox div div{
+.signUpContainer_1 .parent_3 .buttonBox div div {
 
     display: flex;
     flex-direction: row;
 }
 
-.signUpContainer_1 .parent_3 .buttonBox div div a{
+.signUpContainer_1 .parent_3 .buttonBox div div a {
 
     width: 100%;
     height: 100%;
@@ -1071,7 +1076,7 @@ body {
     justify-content: space-around;
 }
 
-.signUpContainer_1 .parent_3 .buttonBox div div a button{
+.signUpContainer_1 .parent_3 .buttonBox div div a button {
 
     font-size: 18px;
     border-style: none;
@@ -1081,24 +1086,24 @@ body {
 
 .signUpContainer_1 .parent_3 .need {
 
-    width: 100%;   
+    width: 100%;
     height: 30px;
     display: flex;
     justify-content: center;
 }
 
-.signUpContainer_1 .parent_3 .need p{
-    
+.signUpContainer_1 .parent_3 .need p {
+
     height: 30px;
-    font-size: 16px;    
+    font-size: 16px;
 }
 
-.signUpContainer_1 .parent_3 .need p span{
+.signUpContainer_1 .parent_3 .need p span {
 
-    font-size: 18px;    
+    font-size: 18px;
 }
 
-.signUpContainer_1 .parent_3 .need p span a{
+.signUpContainer_1 .parent_3 .need p span a {
 
     text-decoration: none;
 }
@@ -1108,7 +1113,7 @@ body {
 
 /*=================================== todoFront.html started =====================================*/
 
-.main{
+.main {
 
     width: 60%;
     height: 100%;
@@ -1117,7 +1122,7 @@ body {
     margin-bottom: 120px;
 }
 
-.todoFront_Container_1{
+.todoFront_Container_1 {
 
     display: flex;
     flex-direction: row;
@@ -1125,7 +1130,7 @@ body {
     margin-bottom: 100px;
 }
 
-.todoFront_Container_1 .parent_1{
+.todoFront_Container_1 .parent_1 {
 
     display: flex;
     flex-direction: row;
@@ -1133,15 +1138,15 @@ body {
     gap: 20px;
 }
 
-.todoFront_Container_1 .parent_1 .child_1{
-    
+.todoFront_Container_1 .parent_1 .child_1 {
+
     width: 100px;
     display: flex;
     justify-content: center;
 }
 
-.todoFront_Container_1 .parent_1 .child_1 img{
-    
+.todoFront_Container_1 .parent_1 .child_1 img {
+
     border-radius: 50px;
 }
 
@@ -1149,11 +1154,11 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    gap: 0px;                  
+    justify-content: center;
+    gap: 0px;
 }
 
-.todoFront_Container_1 .parent_1 .child_2 h1{
+.todoFront_Container_1 .parent_1 .child_2 h1 {
 
     margin: 0;
     font-size: 30px;
@@ -1161,30 +1166,30 @@ body {
     line-height: 1.2;
 }
 
-.todoFront_Container_1 .parent_1 .child_2 p{
-    
+.todoFront_Container_1 .parent_1 .child_2 p {
+
     margin: 0;
     font-size: 26px;
     font-weight: 400;
     line-height: 1.2;
 }
 
-.todoFront_Container_1 .parent_2{
+.todoFront_Container_1 .parent_2 {
 
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.todoFront_Container_1 .parent_2 img{
+.todoFront_Container_1 .parent_2 img {
 
     width: 40px;
 }
 
 
 
-.todoFront_Container_2{
-    
+.todoFront_Container_2 {
+
     width: 100%;
     padding: 0px 20px;
     margin-bottom: 30px;
@@ -1197,7 +1202,7 @@ body {
     gap: 10px;
 }
 
-.todoFront_Container_2 .parent_1{
+.todoFront_Container_2 .parent_1 {
 
     width: 80%;
 
@@ -1207,23 +1212,23 @@ body {
     gap: 20px;
 }
 
-.todoFront_Container_2 .parent_1 .child_1{
+.todoFront_Container_2 .parent_1 .child_1 {
 
     width: 10%;
 }
 
-.todoFront_Container_2 .parent_1 .child_2{
+.todoFront_Container_2 .parent_1 .child_2 {
 
     width: 50%;
     overflow: hidden;
 }
 
-.todoFront_Container_2 .parent_1 .child_1 img{
+.todoFront_Container_2 .parent_1 .child_1 img {
 
     border-radius: 6px;
 }
 
-.todoFront_Container_2 .parent_2{
+.todoFront_Container_2 .parent_2 {
 
     width: 20%;
 
@@ -1234,13 +1239,13 @@ body {
     gap: 20px;
 }
 
-.todoFront_Container_2 .parent_2 .child_1{
+.todoFront_Container_2 .parent_2 .child_1 {
 
     width: 100px;
     height: 35px;
 }
 
-.todoFront_Container_2 .parent_2 .child_1 button{
+.todoFront_Container_2 .parent_2 .child_1 button {
 
     width: 100%;
     height: 100%;
@@ -1252,15 +1257,15 @@ body {
 }
 
 
-.todoFront_Container_2 .parent_2 .child_2{
+.todoFront_Container_2 .parent_2 .child_2 {
 
-    width: 25px;    
-    height: 25px;    
+    width: 25px;
+    height: 25px;
 }
 
 
 
-.todoFront_Container_3{
+.todoFront_Container_3 {
 
     width: 60%;
     height: 100px;
@@ -1276,11 +1281,13 @@ body {
     align-items: center;
 }
 
-.todoFront_Container_3 .parent_1{
+.todoFront_Container_3 .parent_1 {
 
     width: 80%;
     height: 50px;
+    cursor: pointer;
     border-radius: 8px;
+    transition: all 0.4s;
     background-color: var(--bg-blue);
     box-shadow: 0px 0px 40px 0px #8870FF4D;
 
@@ -1290,9 +1297,21 @@ body {
     align-items: center;
 }
 
-.todoFront_Container_3 .parent_1 .child_1{
+.todoFront_Container_3 .parent_1:hover {
 
-    height: 30px;
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 8px;
+    color: var(--bg-blue);
+    background-color: transparent;
+    border: 1px solid var(--bg-blue);
+}
+
+.todoFront_Container_3 .parent_1 .child_1 {
+
+    height: 100%;
 
     display: flex;
     flex-direction: row;
@@ -1301,12 +1320,12 @@ body {
     gap: 10px;
 }
 
-.todoFront_Container_3 .parent_1 .child_1 img{
+.todoFront_Container_3 .parent_1 .child_1 img {
 
     width: 30px;
 }
 
-.todoFront_Container_3 .parent_1 .child_1 p{
+.todoFront_Container_3 .parent_1 .child_1 p {
 
     margin: 0;
     line-height: 1.2;
@@ -1314,27 +1333,241 @@ body {
     font-size: 22px;
 }
 
+.todoFront_Container_3 .parent_2 {
+
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.4s;
+    background-color: var(--bg-blue);
+    box-shadow: 0px 0px 40px 0px #8870FF4D;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoFront_Container_3 .parent_2:hover {
+
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 8px;
+    color: var(--bg-blue);
+    background-color: transparent;
+    border: 1px solid var(--bg-blue);
+}
+
+.todoFront_Container_3 .parent_2 .child_1 {
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.todoFront_Container_3 .parent_2 .child_1 img {
+
+    width: 30px;
+}
+
+.todoFront_Container_3 .parent_2 .child_1 p {
+
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+
+
+
+.createList {
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0px;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+.createList .box_CreateList {
+
+    width: 40%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background-color: var(--bg-dark-gray);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.createList .box_CreateList .parent_1 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.createList .box_CreateList .parent_1 .child_1 {
+
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.createList .box_CreateList .parent_1 .child_1 .label_1 {
+
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.createList .box_CreateList .parent_1 .child_1 div {
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.createList .box_CreateList .parent_1 .child_1 div input {
+
+    margin: 8px;
+    cursor: pointer;
+    transform: scale(1.6);
+}
+
+.createList .box_CreateList .parent_1 .child_1 div label {
+
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+
+.createList .box_CreateList .parent_1 .child_1 {
+
+    width: 100%;
+}
+
+.createList .box_CreateList .parent_1 .child_2 .label_1 {
+
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.createList .box_CreateList .parent_1 .child_2 .grandChild_1 p {
+
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.createList .box_CreateList .parent_1 .child_2 .grandChild_1 .calender input {
+
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+    box-shadow: 8px 8px 5px black;
+    /* border-style: none; */
+}
+
+
+.createList .box_CreateList .parent_2 {
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.createList .box_CreateList .parent_2 .cencel {
+
+    width: 159px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: var(--color-blue);
+    background-color: transparent;
+    border: 1px solid var(--bg-blue);
+}
+
+.createList .box_CreateList .parent_2 .cencel:hover {
+
+    border: none;
+    color: var(--color-white);
+    background-color: var(--bg-blue);
+    transition: all 0.4s;
+}
+
+.createList .box_CreateList .parent_2 .create {
+
+    border: none;
+    width: 159px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 8px;
+    color: var(--color-white);
+    background-color: var(--bg-blue);
+}
+
+.createList .box_CreateList .parent_2 .create:hover {
+
+    transition: all 0.4s;
+    color: var(--color-blue);
+    background-color: transparent;
+    border: 1px solid var(--bg-blue);
+}
+
 /*=================================== todoFront.html ended =====================================*/
 
 
 @media (max-width: 1440px) {
 
-/*=================================== login.html started =====================================*/
+    /*=================================== login.html started =====================================*/
 
-.loginContainer_1 {
+    .loginContainer_1 {
 
-    width: 50%;
-    margin: 0 auto;
-}
+        width: 50%;
+        margin: 0 auto;
+    }
 
-/*=================================== login.html ended =====================================*/
+    /*=================================== login.html ended =====================================*/
 }
 
 
 @media (max-width: 1024px) {
 
 
-/*================================= welcome.html started ===================================*/
+    /*================================= welcome.html started ===================================*/
 
     .box_top {
 
@@ -1393,10 +1626,10 @@ body {
         gap: 42px;
     }
 
-/*================================= welcome.html ended ===================================*/
+    /*================================= welcome.html ended ===================================*/
 
 
-/*================================= manage.html started ===================================*/
+    /*================================= manage.html started ===================================*/
 
     .box_top {
 
@@ -1457,10 +1690,10 @@ body {
         gap: 42px;
     }
 
-/*================================= manage.html ended ===================================*/
+    /*================================= manage.html ended ===================================*/
 
 
-/*================================= customized.html started ===================================*/
+    /*================================= customized.html started ===================================*/
 
     .customizedContainer_1 {
 
@@ -1494,264 +1727,270 @@ body {
         gap: 42px;
     }
 
-/*================================= customized.html ended ===================================*/
+    /*================================= customized.html ended ===================================*/
 
 
 
-/*========================== customized.html ended ===============================*/
-.customizedContainer_1 {
+    /*========================== customized.html ended ===============================*/
+    .customizedContainer_1 {
 
-    width: 100%;
-    height: 100vh;
+        width: 100%;
+        height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    z-index: 1;
-}
-
-.customizedContainer_1 .child_1 {
-
-    width: 30%;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.customizedContainer_1 .child_1 img {
-
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 40px;
-
-    animation-name: object;
-    animation-delay: 1s;
-    animation-duration: 6s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-
-}
-
-@keyframes object {
-
-    0% {
-        transform: rotateY(360deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        z-index: 1;
     }
 
-    100% {
-        transform: rotateY(-360deg);
+    .customizedContainer_1 .child_1 {
+
+        width: 30%;
+        margin-top: 20px;
+        text-align: center;
     }
-}
 
-.customizedContainer_1 .child_1 img {
+    .customizedContainer_1 .child_1 img {
 
-    width: 380px;
-}
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 40px;
 
-.customizedContainer_1 .child_1 h1 {
+        animation-name: object;
+        animation-delay: 1s;
+        animation-duration: 6s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
 
-    font-weight: 700;
-    font-size: 40px;
-}
+    }
 
-.customizedContainer_1 .child_2 img {
+    @keyframes object {
 
-    width: 40px;
-    height: 8px;
+        0% {
+            transform: rotateY(360deg);
+        }
 
-}
+        100% {
+            transform: rotateY(-360deg);
+        }
+    }
 
-.customizedContainer_1 .child_3 {
+    .customizedContainer_1 .child_1 img {
 
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
+        width: 380px;
+    }
 
-.customizedContainer_1 .child_3 a {
+    .customizedContainer_1 .child_1 h1 {
 
-    width: 380px;
-    height: 55px;
-}
+        font-weight: 700;
+        font-size: 40px;
+    }
 
-.customizedContainer_1 .child_3 a .getStart {
+    .customizedContainer_1 .child_2 img {
 
-    width: 380px;
-    height: 55px;
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--color-white);
-    border-radius: 8px;
-    border-style: none;
-    background-color: var(--bg-blue);
-    box-shadow: 0px 0px 40px 0px #8870FF4D;
-}
+        width: 40px;
+        height: 8px;
 
-.customizedContainer_1 .child_3 a .getStart:hover {
+    }
 
-    font-size: 28px;
-    font-weight: 500;
-    border-radius: 8px;
-    border-style: none;
-    color: var(--color-blue);
-    border: 1px solid var(--bg-blue);
-    background-color: transparent;
-    box-shadow: none;
+    .customizedContainer_1 .child_3 {
 
-}
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
 
-/*=================================== customized.html ended =====================================*/
+    .customizedContainer_1 .child_3 a {
 
+        width: 380px;
+        height: 55px;
+    }
 
-/*=================================== login.html started =====================================*/
+    .customizedContainer_1 .child_3 a .getStart {
 
-.logo {
+        width: 380px;
+        height: 55px;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--color-white);
+        border-radius: 8px;
+        border-style: none;
+        background-color: var(--bg-blue);
+        box-shadow: 0px 0px 40px 0px #8870FF4D;
+    }
 
-    margin: 5px 0px 20px 0px;
+    .customizedContainer_1 .child_3 a .getStart:hover {
 
-}
+        font-size: 28px;
+        font-weight: 500;
+        border-radius: 8px;
+        border-style: none;
+        color: var(--color-blue);
+        border: 1px solid var(--bg-blue);
+        background-color: transparent;
+        box-shadow: none;
 
-.loginContainer_1 {
+    }
 
-    width: 70%;
-}
+    /*=================================== customized.html ended =====================================*/
 
-.loginContainer_1 .parent_2 form input {
 
-    margin-bottom: 10px;
+    /*=================================== login.html started =====================================*/
 
-}
+    .logo {
 
-.loginContainer_1 .parent_2 form .loginBox {
+        margin: 5px 0px 20px 0px;
 
-    margin: 25px 0px;
-}
+    }
 
-.loginContainer_1 .parent_3 {
+    .loginContainer_1 {
 
-    gap: 10px;
-}
+        width: 70%;
+    }
 
-/*=================================== login.html ended =====================================*/
+    .loginContainer_1 .parent_2 form input {
 
+        margin-bottom: 10px;
 
-/*=================================== Sign up.html started =====================================*/
+    }
 
-.logo {
+    .loginContainer_1 .parent_2 form .loginBox {
 
-    margin: 5px 0px 0px 0px;
-}
+        margin: 25px 0px;
+    }
 
-#signUpLogo img{
-    
-    width: 80px;
-}
+    .loginContainer_1 .parent_3 {
 
-.signUpContainer_1 .parent_1 h1 {
-    
-    font-size: 28px;
-}
+        gap: 10px;
+    }
 
-.signUpContainer_1 .parent_2 form label {
+    /*=================================== login.html ended =====================================*/
 
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
 
-.signUpContainer_1 .parent_2 form input {
+    /*=================================== Sign up.html started =====================================*/
 
-    padding: 0px 10px;
-    margin-bottom: 10px;
-}
+    .logo {
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
-    
-    margin-bottom: 0px;
-}
+        margin: 5px 0px 0px 0px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox {
+    #signUpLogo img {
 
-    width: 100%;
-    margin: 5px 0px 10px 0px;
-}
+        width: 80px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox a button {
+    .signUpContainer_1 .parent_1 h1 {
 
-    height: 40px;
-}
+        font-size: 28px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox a button input{
+    .signUpContainer_1 .parent_2 form label {
 
-    height: 40px;
-}
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
 
-.signUpContainer_1 .parent_3 {
+    .signUpContainer_1 .parent_2 form input {
 
-    padding: 5px 0px;
-    gap: 5px;
-}
+        padding: 0px 10px;
+        margin-bottom: 10px;
+    }
 
-.signUpContainer_1 .parent_3 h2 {
+    .signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox {
 
-    font-size: 20px;
-}
+        margin-bottom: 0px;
+    }
 
-.signUpContainer_1 .parent_3 .buttonBox {
+    .signUpContainer_1 .parent_2 form .loginBox {
 
-    gap: 20px;
-}
+        width: 100%;
+        margin: 5px 0px 10px 0px;
+    }
 
-.signUpContainer_1 .parent_3 .buttonBox div div a button{
-    
-    font-size: 14px;
-}
+    .signUpContainer_1 .parent_2 form .loginBox a button {
 
-/*=================================== Sign up.html ended =====================================*/
+        height: 40px;
+    }
 
-/*=================================== todoFront.html started =====================================*/
+    .signUpContainer_1 .parent_2 form .loginBox a button input {
 
-.main{
+        height: 40px;
+    }
 
-    width: 70%;
-    margin-top: 40px;
-}
+    .signUpContainer_1 .parent_3 {
 
-.todoFront_Container_1 .parent_1 .child_2 h1{
-    
-    font-size: 26px;
-}
+        padding: 5px 0px;
+        gap: 5px;
+    }
 
-.todoFront_Container_1 .parent_1 .child_2 p{
-    
-    font-size: 22px;
-}
+    .signUpContainer_1 .parent_3 h2 {
 
+        font-size: 20px;
+    }
 
-.todoFront_Container_3{
-    
-    width: 70%;
-    height: 100px;
-    border-radius: 2px;
-    background-color: var(--bg-dark-gray);
-    
-    position: fixed;
-    bottom: 30px;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+    .signUpContainer_1 .parent_3 .buttonBox {
 
-.todoFront_Container_2 .parent_1 .child_2{
+        gap: 20px;
+    }
 
-    width: 420px;
-}
+    .signUpContainer_1 .parent_3 .buttonBox div div a button {
 
-/*=================================== todoFront.html ended =====================================*/
+        font-size: 14px;
+    }
+
+    /*=================================== Sign up.html ended =====================================*/
+
+    /*=================================== todoFront.html started =====================================*/
+
+    .main {
+
+        width: 70%;
+        margin-top: 40px;
+    }
+
+    .todoFront_Container_1 .parent_1 .child_2 h1 {
+
+        font-size: 26px;
+    }
+
+    .todoFront_Container_1 .parent_1 .child_2 p {
+
+        font-size: 22px;
+    }
+
+
+    .todoFront_Container_3 {
+
+        width: 70%;
+        height: 100px;
+        border-radius: 2px;
+        background-color: var(--bg-dark-gray);
+
+        position: fixed;
+        bottom: 30px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 {
+
+        width: 420px;
+    }
+
+
+    .createList .box_CreateList {
+
+        width: 50%;
+    }
+
+    /*=================================== todoFront.html ended =====================================*/
 
 }
 
@@ -1759,14 +1998,14 @@ body {
 @media (max-width: 768px) {
 
 
-/*================================= welcome.html started ===================================*/
+    /*================================= welcome.html started ===================================*/
 
     .box_top {
 
         width: 120px;
         height: 120px;
     }
-    
+
 
     .box_bottom {
 
@@ -1832,10 +2071,10 @@ body {
 
     }
 
-/*================================= welcome.html ended ===================================*/
+    /*================================= welcome.html ended ===================================*/
 
 
-/*================================= manage.html started ===================================*/
+    /*================================= manage.html started ===================================*/
 
     .box_top {
 
@@ -1909,10 +2148,10 @@ body {
 
     }
 
-/*================================= manage.html ended ===================================*/
+    /*================================= manage.html ended ===================================*/
 
 
-/*================================= customized.html started ===================================*/
+    /*================================= customized.html started ===================================*/
 
     .customizedContainer_1 {
 
@@ -1965,69 +2204,74 @@ body {
 
     }
 
-/*================================= customized.html ended ===================================*/
+    /*================================= customized.html ended ===================================*/
 
-/*=================================== login.html started =====================================*/
+    /*=================================== login.html started =====================================*/
 
-.loginContainer_1 {
+    .loginContainer_1 {
 
-    width: 70%;
-    margin: 0 auto;
-}
+        width: 70%;
+        margin: 0 auto;
+    }
 
-/*=================================== login.html ended =====================================*/
-
-
-/*=================================== todoFront.html started =====================================*/
-
-.main{
-
-    width: 80%;
-    margin-top: 40px;
-}
-
-.todoFront_Container_1 .parent_1 .child_2 p{
-    
-    font-size: 12px;
-}
-
-.todoFront_Container_1 .parent_2 img{
-
-    width: 35px;
-}
+    /*=================================== login.html ended =====================================*/
 
 
+    /*=================================== todoFront.html started =====================================*/
 
-.todoFront_Container_2 .parent_2 .child_2{
+    .main {
 
-    width: 40px;
-}
+        width: 80%;
+        margin-top: 40px;
+    }
+
+    .todoFront_Container_1 .parent_1 .child_2 p {
+
+        font-size: 12px;
+    }
+
+    .todoFront_Container_1 .parent_2 img {
+
+        width: 35px;
+    }
 
 
 
-.todoFront_Container_3{
+    .todoFront_Container_2 .parent_2 .child_2 {
 
-    width: 80%;
-    height: 80px;
-}
-
-.todoFront_Container_3 .parent_1{
-
-    height: 45px;
-}
-
-.todoFront_Container_3 .parent_1 .child_1 img{
-
-    width: 25px;
-}
-
-.todoFront_Container_3 .parent_1 .child_1 p{
-
-    font-size: 20px;
-}
+        width: 40px;
+    }
 
 
-/*=================================== todoFront.html ended =====================================*/
+
+    .todoFront_Container_3 {
+
+        width: 80%;
+        height: 80px;
+    }
+
+    .todoFront_Container_3 .parent_1 {
+
+        height: 45px;
+    }
+
+    .todoFront_Container_3 .parent_1 .child_1 img {
+
+        width: 25px;
+    }
+
+    .todoFront_Container_3 .parent_1 .child_1 p {
+
+        font-size: 20px;
+    }
+
+
+    .createList .box_CreateList {
+
+        width: 70%;
+    }
+
+    /*=================================== todoFront.html ended =====================================*/
 
 
 }
@@ -2036,7 +2280,7 @@ body {
 @media (max-width: 600px) {
 
 
-/*================================= welcome.html started ===================================*/
+    /*================================= welcome.html started ===================================*/
 
     .box_top {
 
@@ -2088,10 +2332,10 @@ body {
         gap: 42px;
     }
 
-/*================================= welcome.html ended ===================================*/
+    /*================================= welcome.html ended ===================================*/
 
 
-/*================================= manage.html started ===================================*/
+    /*================================= manage.html started ===================================*/
 
 
     .box_top {
@@ -2143,10 +2387,10 @@ body {
         gap: 42px;
     }
 
-/*================================= manage.html ended ===================================*/
+    /*================================= manage.html ended ===================================*/
 
 
-/*================================= customized.html started ===================================*/
+    /*================================= customized.html started ===================================*/
 
     .customizedContainer_1 {
 
@@ -2185,45 +2429,46 @@ body {
         gap: 42px;
     }
 
-/*================================= customized.html ended ===================================*/
+    /*================================= customized.html ended ===================================*/
 
-/*================================= todoFront.html started ===================================*/
+    /*================================= todoFront.html started ===================================*/
 
-.todoFront_Container_2 .parent_1{
+    .todoFront_Container_2 .parent_1 {
 
-    width: 70%;
-}
+        width: 70%;
+    }
 
-.todoFront_Container_2 .parent_1 .child_1{
+    .todoFront_Container_2 .parent_1 .child_1 {
 
-    width: 15%;
-}
-
-
-
-.todoFront_Container_2 .parent_2{
-
-    width: 30%;
-}
+        width: 15%;
+    }
 
 
-.todoFront_Container_2 .parent_2 .child_1{
 
-    width: 70%;
-}
+    .todoFront_Container_2 .parent_2 {
 
-.todoFront_Container_2 .parent_2 .child_2{
-
-    width: 30%;
-}
+        width: 30%;
+    }
 
 
-.todoFront_Container_2 .parent_1 .child_2{
+    .todoFront_Container_2 .parent_2 .child_1 {
 
-    width: 85%;
-    overflow: hidden;
-}
-/*================================= todoFront.html ended ===================================*/
+        width: 70%;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 {
+
+        width: 30%;
+    }
+
+
+    .todoFront_Container_2 .parent_1 .child_2 {
+
+        width: 85%;
+        overflow: hidden;
+    }
+
+    /*================================= todoFront.html ended ===================================*/
 
 }
 
@@ -2231,7 +2476,7 @@ body {
 @media (max-width: 450px) {
 
 
-/*================================= welcome.html started ===================================*/
+    /*================================= welcome.html started ===================================*/
     .welcomeContainer_1 {
 
         width: 100%;
@@ -2328,10 +2573,10 @@ body {
 
     }
 
-/*================================= welcome.html ended ===================================*/
+    /*================================= welcome.html ended ===================================*/
 
 
-/*================================= manage.html started ===================================*/
+    /*================================= manage.html started ===================================*/
     .manageContainer_1 {
 
         width: 100%;
@@ -2403,10 +2648,10 @@ body {
 
     }
 
-/*================================= manage.html ended ===================================*/
+    /*================================= manage.html ended ===================================*/
 
 
-/*================================= customized.html started ===================================*/
+    /*================================= customized.html started ===================================*/
     .customizedContainer_1 {
 
         width: 100%;
@@ -2478,242 +2723,247 @@ body {
 
     }
 
-/*================================= customized.html ended ===================================*/
+    /*================================= customized.html ended ===================================*/
 
 
 
-/*=================================== login.html started =====================================*/
+    /*=================================== login.html started =====================================*/
 
-.logo {
+    .logo {
 
-    margin: 5px 0px 40px 0px;
+        margin: 5px 0px 40px 0px;
 
-}
+    }
 
-.logo img{
+    .logo img {
 
-    width: 70px;
+        width: 70px;
 
-}
+    }
 
-.loginContainer_1 {
+    .loginContainer_1 {
 
-    width: 90%;
-}
+        width: 90%;
+    }
 
-.loginContainer_1 .parent_2 form input {
+    .loginContainer_1 .parent_2 form input {
 
-    margin-bottom: 10px;
-}
+        margin-bottom: 10px;
+    }
 
-.loginContainer_1 .parent_2 form .loginBox {
+    .loginContainer_1 .parent_2 form .loginBox {
 
-    margin: 25px 0px;
-}
+        margin: 25px 0px;
+    }
 
-.loginContainer_1 .parent_3 {
+    .loginContainer_1 .parent_3 {
 
-    gap: 25px;
-}
+        gap: 25px;
+    }
 
-.loginContainer_1 .parent_3 h2{
+    .loginContainer_1 .parent_3 h2 {
 
-    font-size: 22px;
-}
+        font-size: 22px;
+    }
 
-.loginContainer_1 .parent_1 h1 {
+    .loginContainer_1 .parent_1 h1 {
 
-    font-size: 28px;
-}
+        font-size: 28px;
+    }
 
-.loginContainer_1 .parent_2 form label {
+    .loginContainer_1 .parent_2 form label {
 
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 
-.loginContainer_1 .parent_2 form .loginBox {
+    .loginContainer_1 .parent_2 form .loginBox {
 
-    margin: 50px 0px;
-}
+        margin: 50px 0px;
+    }
 
-/*=================================== login.html ended =====================================*/
+    /*=================================== login.html ended =====================================*/
 
 
-/*=================================== Sign up.html started =====================================*/
+    /*=================================== Sign up.html started =====================================*/
 
-.logo {
+    .logo {
 
-    margin: 5px 0px 0px 0px;
-}
+        margin: 5px 0px 0px 0px;
+    }
 
-#signUpLogo img{
-    
-    width: 80px;
-}
+    #signUpLogo img {
 
-.signUpContainer_1{
-    
-    width: 90%;
-}
+        width: 80px;
+    }
 
-.signUpContainer_1 .parent_1 h1 {
-    
-    font-size: 28px;
-}
+    .signUpContainer_1 {
 
-.signUpContainer_1 .parent_2 form label {
+        width: 90%;
+    }
 
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
+    .signUpContainer_1 .parent_1 h1 {
 
-.signUpContainer_1 .parent_2 form input {
+        font-size: 28px;
+    }
 
-    padding: 0px 10px;
-    margin-bottom: 10px;
-}
+    .signUpContainer_1 .parent_2 form label {
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
-    
-    margin-bottom: 0px;
-}
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox {
+    .signUpContainer_1 .parent_2 form input {
 
-    width: 100%;
-    margin: 5px 0px 10px 0px;
-}
+        padding: 0px 10px;
+        margin-bottom: 10px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox a button {
+    .signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox {
 
-    height: 40px;
-}
+        margin-bottom: 0px;
+    }
 
-.signUpContainer_1 .parent_3 {
+    .signUpContainer_1 .parent_2 form .loginBox {
 
-    padding: 5px 0px;
-    gap: 5px;
-}
+        width: 100%;
+        margin: 5px 0px 10px 0px;
+    }
 
-.signUpContainer_1 .parent_3 h2 {
+    .signUpContainer_1 .parent_2 form .loginBox a button {
 
-    font-size: 20px;
-}
+        height: 40px;
+    }
 
-.signUpContainer_1 .parent_3 .buttonBox {
+    .signUpContainer_1 .parent_3 {
 
-    gap: 20px;
-}
+        padding: 5px 0px;
+        gap: 5px;
+    }
 
-.signUpContainer_1 .parent_3 .buttonBox div div a button{
-    
-    font-size: 14px;
-}
+    .signUpContainer_1 .parent_3 h2 {
 
-/*=================================== Sign up.html ended =====================================*/
+        font-size: 20px;
+    }
 
+    .signUpContainer_1 .parent_3 .buttonBox {
 
-/*=================================== todoFront.html started =====================================*/
+        gap: 20px;
+    }
 
-.main{
+    .signUpContainer_1 .parent_3 .buttonBox div div a button {
 
-    width: 100%;
-    margin-top: 20px;
-}
+        font-size: 14px;
+    }
 
-.todoFront_Container_1 {
-    
-    margin-bottom: 80px;
-    padding: 0px 10px;
-}
+    /*=================================== Sign up.html ended =====================================*/
 
-.todoFront_Container_1 .parent_1{
-    
-    gap: 4px;
-}
 
-.todoFront_Container_1 .parent_1 .child_1{
-    
-    width: 70px;
-}
+    /*=================================== todoFront.html started =====================================*/
 
-.todoFront_Container_1 .parent_1 .child_1 img{
-    
-    width: 100%;
-}
+    .main {
 
-.todoFront_Container_1 .parent_1 .child_2 h2{
-    
-    font-size: 22px;
-}
+        width: 100%;
+        margin-top: 20px;
+    }
 
-.todoFront_Container_1 .parent_1 .child_2 p{
-    
-    font-size: 12px;
-}
+    .todoFront_Container_1 {
 
-.todoFront_Container_1 .parent_2 img{
+        margin-bottom: 80px;
+        padding: 0px 10px;
+    }
 
-    width: 30px;
-}
+    .todoFront_Container_1 .parent_1 {
 
+        gap: 4px;
+    }
 
+    .todoFront_Container_1 .parent_1 .child_1 {
 
-.todoFront_Container_2 .parent_1{
+        width: 70px;
+    }
 
-    width: 70%;
-}
+    .todoFront_Container_1 .parent_1 .child_1 img {
 
-.todoFront_Container_2 .parent_1 .child_1{
+        width: 100%;
+    }
 
-    width: 15%;
-}
+    .todoFront_Container_1 .parent_1 .child_2 h2 {
 
-.todoFront_Container_2 .parent_1 .child_2 h1{
+        font-size: 22px;
+    }
 
-    font-size: 20px;
-}
+    .todoFront_Container_1 .parent_1 .child_2 p {
 
-.todoFront_Container_2 .parent_2{
+        font-size: 12px;
+    }
 
-    width: 30%;
-}
+    .todoFront_Container_1 .parent_2 img {
 
-.todoFront_Container_2 .parent_2 .child_1{
+        width: 30px;
+    }
 
-    width: 70%;
-}
 
-.todoFront_Container_2 .parent_2 .child_2{
 
-    width: 30%;
-}
+    .todoFront_Container_2 .parent_1 {
 
+        width: 70%;
+    }
 
+    .todoFront_Container_2 .parent_1 .child_1 {
 
-.todoFront_Container_3{
+        width: 15%;
+    }
 
-    width: 100%;
-    height: 70px;
-}
+    .todoFront_Container_2 .parent_1 .child_2 h1 {
 
-.todoFront_Container_3 .parent_1{
+        font-size: 20px;
+    }
 
-    height: 38px;
-}
+    .todoFront_Container_2 .parent_2 {
 
-.todoFront_Container_3 .parent_1 .child_1 img{
+        width: 30%;
+    }
 
-    width: 22px;
-}
+    .todoFront_Container_2 .parent_2 .child_1 {
 
-.todoFront_Container_3 .parent_1 .child_1 p{
+        width: 70%;
+    }
 
-    font-size: 18px;
-}
+    .todoFront_Container_2 .parent_2 .child_2 {
 
-/*=================================== todoFront.html ended =====================================*/
+        width: 30%;
+    }
+
+
+
+    .todoFront_Container_3 {
+
+        width: 100%;
+        height: 70px;
+    }
+
+    .todoFront_Container_3 .parent_1 {
+
+        height: 38px;
+    }
+
+    .todoFront_Container_3 .parent_1 .child_1 img {
+
+        width: 22px;
+    }
+
+    .todoFront_Container_3 .parent_1 .child_1 p {
+
+        font-size: 18px;
+    }
+
+    .createList .box_CreateList {
+
+        width: 80%;
+    }
+
+    /*=================================== todoFront.html ended =====================================*/
 
 }
 
@@ -2721,7 +2971,7 @@ body {
 @media (max-width: 350px) {
 
 
-/*================================= welcome.html started ===================================*/
+    /*================================= welcome.html started ===================================*/
     .welcomeContainer_1 {
 
         width: 100%;
@@ -2770,10 +3020,10 @@ body {
         height: 38px;
     }
 
-/*================================= welcome.html ended ===================================*/
+    /*================================= welcome.html ended ===================================*/
 
 
-/*================================= manage.html started ===================================*/
+    /*================================= manage.html started ===================================*/
     .manageContainer_1 {
 
         width: 100%;
@@ -2822,10 +3072,10 @@ body {
         height: 38px;
     }
 
-/*================================= manage.html ended ===================================*/
+    /*================================= manage.html ended ===================================*/
 
 
-/*================================= customized.html started ===================================*/
+    /*================================= customized.html started ===================================*/
     .customizedContainer_1 {
 
         width: 100%;
@@ -2868,254 +3118,281 @@ body {
         height: 38px;
     }
 
-/*================================= customized.html ended ===================================*/
+    /*================================= customized.html ended ===================================*/
 
 
-/*=================================== login.html started =====================================*/
+    /*=================================== login.html started =====================================*/
 
-.logo {
+    .logo {
 
-    margin: 5px 0px 40px 0px;
+        margin: 5px 0px 40px 0px;
 
-}
+    }
 
-.logo img{
+    .logo img {
 
-    width: 70px;
+        width: 70px;
 
-}
+    }
 
-.loginContainer_1 {
+    .loginContainer_1 {
 
-    width: 90%;
-}
+        width: 90%;
+    }
 
-.loginContainer_1 .parent_2 form input {
+    .loginContainer_1 .parent_2 form input {
 
-    margin-bottom: 10px;
+        margin-bottom: 10px;
 
-}
+    }
 
-.loginContainer_1 .parent_2 form .loginBox {
+    .loginContainer_1 .parent_2 form .loginBox {
 
-    margin: 25px 0px;
-}
+        margin: 25px 0px;
+    }
 
-.loginContainer_1 .parent_3 {
+    .loginContainer_1 .parent_3 {
 
-    gap: 25px;
-}
+        gap: 25px;
+    }
 
-.loginContainer_1 .parent_3 h2{
+    .loginContainer_1 .parent_3 h2 {
 
-    font-size: 22px;
-}
+        font-size: 22px;
+    }
 
 
-.loginContainer_1 .parent_1 h1 {
+    .loginContainer_1 .parent_1 h1 {
 
-    font-size: 28px;
-}
+        font-size: 28px;
+    }
 
 
-.loginContainer_1 .parent_2 form label {
+    .loginContainer_1 .parent_2 form label {
 
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 
 
-.loginContainer_1 .parent_2 form .loginBox {
+    .loginContainer_1 .parent_2 form .loginBox {
 
-    margin: 50px 0px;
-}
+        margin: 50px 0px;
+    }
 
-/*=================================== login.html ended =====================================*/
+    /*=================================== login.html ended =====================================*/
 
 
-/*=================================== Sign up.html started =====================================*/
+    /*=================================== Sign up.html started =====================================*/
 
-.logo {
+    .logo {
 
-    margin: 5px 0px 0px 0px;
-}
+        margin: 5px 0px 0px 0px;
+    }
 
-#signUpLogo img{
-    
-    width: 80px;
-}
+    #signUpLogo img {
 
-.signUpContainer_1{
-    
-    width: 95%;
-}
+        width: 80px;
+    }
 
-.signUpContainer_1 .parent_1 h1 {
-    
-    font-size: 28px;
-}
+    .signUpContainer_1 {
 
-.signUpContainer_1 .parent_2 form label {
+        width: 95%;
+    }
 
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
+    .signUpContainer_1 .parent_1 h1 {
 
-.signUpContainer_1 .parent_2 form input {
+        font-size: 28px;
+    }
 
-    padding: 0px 10px;
-    margin-bottom: 10px;
-}
+    .signUpContainer_1 .parent_2 form label {
 
-.signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox{
-    
-    margin-bottom: 0px;
-}
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox {
+    .signUpContainer_1 .parent_2 form input {
 
-    width: 100%;
-    margin: 5px 0px 10px 0px;
-}
+        padding: 0px 10px;
+        margin-bottom: 10px;
+    }
 
-.signUpContainer_1 .parent_2 form .loginBox a button {
+    .signUpContainer_1 .parent_2 form .passwordBox .passwordIconBox {
 
-    height: 40px;
-}
+        margin-bottom: 0px;
+    }
 
-.signUpContainer_1 .parent_3 {
+    .signUpContainer_1 .parent_2 form .loginBox {
 
-    padding: 5px 0px;
-    gap: 5px;
-}
+        width: 100%;
+        margin: 5px 0px 10px 0px;
+    }
 
-.signUpContainer_1 .parent_3 h2 {
+    .signUpContainer_1 .parent_2 form .loginBox a button {
 
-    font-size: 20px;
-}
+        height: 40px;
+    }
 
-.signUpContainer_1 .parent_3 .buttonBox {
+    .signUpContainer_1 .parent_3 {
 
-    gap: 20px;
-}
+        padding: 5px 0px;
+        gap: 5px;
+    }
 
-.signUpContainer_1 .parent_3 .buttonBox div div a button{
-    
-    font-size: 14px;
-}
+    .signUpContainer_1 .parent_3 h2 {
 
-/*=================================== Sign up.html ended =====================================*/
+        font-size: 20px;
+    }
 
+    .signUpContainer_1 .parent_3 .buttonBox {
 
-/*=================================== todoFront.html started =====================================*/
+        gap: 20px;
+    }
 
-.main{
+    .signUpContainer_1 .parent_3 .buttonBox div div a button {
 
-    margin-top: 15px;
-}
+        font-size: 14px;
+    }
 
-.todoFront_Container_1 {
-    
-    margin-bottom: 50px;
-    padding: 0px 10px;
+    /*=================================== Sign up.html ended =====================================*/
 
-}
 
-.todoFront_Container_1 .parent_1{
-    
-    
-    display: flex;
-    gap: 6px;
-}
+    /*=================================== todoFront.html started =====================================*/
 
-.todoFront_Container_1 .parent_1 .child_1{
-    
-    width: 60px;
-}
+    .main {
 
-.todoFront_Container_1 .parent_1 .child_1 img{
-    
-    width: 100%;
-}
+        margin-top: 15px;
+    }
 
-.todoFront_Container_1 .parent_1 .child_2 h2{
-    
-    font-size: 18px;
-}
+    .todoFront_Container_1 {
 
-.todoFront_Container_1 .parent_2 img{
+        margin-bottom: 50px;
+        padding: 0px 10px;
 
-    width: 25px;
-}
+    }
 
+    .todoFront_Container_1 .parent_1 {
 
-.todoFront_Container_2 {
 
-    gap: 10px;
-}
+        display: flex;
+        gap: 6px;
+    }
 
-.todoFront_Container_2 .parent_1{
+    .todoFront_Container_1 .parent_1 .child_1 {
 
-    gap: 10px;
-}
+        width: 60px;
+    }
 
-.todoFront_Container_2 .parent_1 .child_1{
+    .todoFront_Container_1 .parent_1 .child_1 img {
 
-    width: 35px;
-}
+        width: 100%;
+    }
 
-.todoFront_Container_2 .parent_1 .child_1 img{
+    .todoFront_Container_1 .parent_1 .child_2 h2 {
 
-    border-radius: 6px;
-}
+        font-size: 18px;
+    }
 
-.todoFront_Container_2 .parent_1 .child_2{
+    .todoFront_Container_1 .parent_2 img {
 
-    width: 140px;
-    overflow: hidden;
-}
+        width: 25px;
+    }
 
-.todoFront_Container_2 .parent_1 .child_2 h1{   
 
-    font-size: 14px;
-    height: 100%;
-}
+    .todoFront_Container_2 {
 
-.todoFront_Container_2 .parent_1 .child_2 p{
+        gap: 10px;
+    }
 
-    font-size: 12px;
-}
+    .todoFront_Container_2 .parent_1 {
 
-.todoFront_Container_2 .parent_2{
+        gap: 10px;
+    }
 
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    gap: 8px;
-}
+    .todoFront_Container_2 .parent_1 .child_1 {
 
-.todoFront_Container_2 .parent_2 .child_1{
+        width: 35px;
+    }
 
-    width: 50px;
-    height: 25px;
-    overflow: hidden;
-}
+    .todoFront_Container_2 .parent_1 .child_1 img {
 
-.todoFront_Container_2 .parent_2 .child_1 button{
+        border-radius: 6px;
+    }
 
-    border-radius: 4px;
-    font-size: 12px;
-}
+    .todoFront_Container_2 .parent_1 .child_2 {
 
+        width: 140px;
+        overflow: hidden;
+    }
 
-.todoFront_Container_2 .parent_2 .child_2{
+    .todoFront_Container_2 .parent_1 .child_2 h1 {
 
-    width: 25px;    
-    height: 25px;    
-}
+        font-size: 14px;
+        height: 100%;
+    }
 
+    .todoFront_Container_2 .parent_1 .child_2 p {
 
-/*=================================== todoFront.html ended =====================================*/
+        font-size: 12px;
+    }
+
+    .todoFront_Container_2 .parent_2 {
+
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 8px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_1 {
+
+        width: 50px;
+        height: 25px;
+        overflow: hidden;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_1 button {
+
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+
+    .todoFront_Container_2 .parent_2 .child_2 {
+
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+    .createList .box_CreateList {
+
+        width: 80%;
+    }
+
+    .createList .box_CreateList .parent_1 .child_1 .label_1{
+
+        font-size: 28px;
+    }
+
+    .createList .box_CreateList .parent_1 .child_1 div label{
+
+        font-size: 18px;
+    }
+
+    .createList .box_CreateList .parent_1 .child_2 .label_1{
+
+        font-size: 28px;
+    }
+
+    .createList .box_CreateList .parent_2 .cencel,
+    .createList .box_CreateList .parent_2 .create {
+
+        font-size: 18px;
+    }
+
+    /*=================================== todoFront.html ended =====================================*/
 
 
 }

@@ -53,7 +53,7 @@ function signUp(e) {
     return;
   }
 
-  if(signUpEmail.indexOf('@gmail.com') === -1){
+  if (signUpEmail.indexOf('@gmail.com') === -1) {
 
     alert("You spelled the email correctly.");
     return;
@@ -229,6 +229,48 @@ function login(e) {
 
 // }
 // =============================== Login Ended ==============================================
+
+
+// =============================== todoFront Started ==============================================
+
+function plusImgWhite() {
+
+  let plusImgWhite = document.getElementById('plusImgWhite');
+  let plusImgBlue = document.getElementById('plusImgBlue');
+
+  plusImgWhite.style.display = 'none';
+  plusImgBlue.style.display = 'block';
+}
+
+function plusImgBlue() {
+
+  let plusImgWhite = document.getElementById('plusImgWhite');
+  let plusImgBlue = document.getElementById('plusImgBlue');
+
+  plusImgWhite.style.display = 'block';
+  plusImgBlue.style.display = 'none';
+
+}
+
+function createTodo() {
+
+  let createdlist = document.getElementById('createdlist');
+  createList.style.display = 'block'
+  createList.style.display = 'flex'
+}
+
+
+function cencel(){
+
+  let createList = document.getElementById('createList');
+
+  createList.style.display = 'none';
+  
+}
+
+
+
+// =============================== todoFront Ended ==============================================
 
 
 

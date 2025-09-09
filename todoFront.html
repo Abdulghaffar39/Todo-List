@@ -44,79 +44,7 @@
         </div>
 
 
-        <div class="todoFront_Container_2">
 
-            <div class="parent_1">
-
-                <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
-
-                <div class="child_2">
-
-                    <h1>To Do Lisas;laskflksjlksfjaslkfjsldkcslkdcjwoafjsalkfnasfujsklhjdfslkdcnskckt</h1>
-                    <p>10/Jan/2025</p>
-
-                </div>
-
-            </div>
-
-            <div class="parent_2">
-
-                <div class="child_1"><button>Today</button></div>
-                <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="todoFront_Container_2">
-
-            <div class="parent_1">
-
-                <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
-
-                <div class="child_2">
-
-                    <h1>To Dolds;mzvfplds'kjvsk;lsdkplsdjkfa;sf;lsdfkaosfjaslkfjAJ;OP List</h1>
-                    <p>10/Jan/2025</p>
-
-                </div>
-
-            </div>
-
-            <div class="parent_2">
-
-                <div class="child_1"><button>Today</button></div>
-                <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="todoFront_Container_2">
-
-            <div class="parent_1">
-
-                <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
-
-                <div class="child_2">
-
-                    <h1>To Do LiDSKF;GDKSPFDSKFG;'LSDKF'PLDSJKBSLDFJKBD;SL'FKDS';LFKDSF'JDSLFKst</h1>
-                    <p>10/Jan/2025</p>
-
-                </div>
-
-            </div>
-
-            <div class="parent_2">
-
-                <div class="child_1"><button>Today</button></div>
-                <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
-
-            </div>
-
-        </div>
 
 
         <div class="todoFront_Container_2">
@@ -143,6 +71,29 @@
 
         </div>
 
+        <div class="todoFront_Container_2">
+
+            <div class="parent_1">
+
+                <div class="child_1"><img src="./Assets/Images/shopping.png" width="100%" alt="todo"></div>
+
+                <div class="child_2">
+
+                    <h1>Shopping List</h1>
+                    <p>10/Jan/2025</p>
+
+                </div>
+
+            </div>
+
+            <div class="parent_2">
+
+                <div class="child_1"><button>Today</button></div>
+                <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+
+            </div>
+
+        </div>
 
         <div class="todoFront_Container_2">
 
@@ -167,11 +118,61 @@
             </div>
 
         </div>
+
+        <div class="todoFront_Container_2">
+
+            <div class="parent_1">
+
+                <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
+
+                <div class="child_2">
+
+                    <h1>To Do List</h1>
+                    <p>10/Jan/2025</p>
+
+                </div>
+
+            </div>
+
+            <div class="parent_2">
+
+                <div class="child_1"><button>Today</button></div>
+                <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+
+            </div>
+
+        </div>
+
+        <div class="todoFront_Container_2">
+
+            <div class="parent_1">
+
+                <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
+
+                <div class="child_2">
+
+                    <h1>To Do List</h1>
+                    <p>10/Jan/2025</p>
+
+                </div>
+
+            </div>
+
+            <div class="parent_2">
+
+                <div class="child_1"><button>Today</button></div>
+                <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+
+            </div>
+
+        </div>
+
+
 
 
         <div class="todoFront_Container_3">
 
-            <div class="parent_1">
+            <div class="parent_1" onmouseenter="plusImgWhite()" id="plusImgWhite">
 
                 <div class="child_1">
                     <img src="./Assets/Images/white plus icon.png" alt="plus">
@@ -180,7 +181,67 @@
 
             </div>
 
+            <div class="parent_2" onmouseout="plusImgBlue()" onclick="createTodo()" id="plusImgBlue"
+                style="display: none;">
+
+                <div class="child_1">
+                    <img src="./Assets/Images/plus.png" alt="plus">
+                    <p>Add New List</p>
+                </div>
+
+            </div>
+
         </div>
+
+    </div>
+
+
+    <div class="createList" id="createList">
+
+        <div class="box_CreateList">
+
+            <div class="parent_1">
+
+                <div class="child_1">
+
+                    <label for="radio" class="label_1">Select List</label>
+
+                    <div>
+                        <input type="radio" name="radio" id="todo_List">
+                        <label for="todo_List">To Do List</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="radio" id="todo_Shopping">
+                        <label for="todo_Shopping">Shopping List</label>
+                    </div>
+
+
+                </div>
+
+                <div class="child_2">
+
+                    <label for="radio" class="label_1">Select Date</label>
+
+                    <div class="grandChild_1">
+
+                        <div class="calender"><input type="date" name="" id=""></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="parent_2">
+
+                <button class="cencel" onclick="cencel()">Cencel</button>
+                <button class="create">Create</button>
+
+            </div>
+        </div>
+
 
     </div>
 
