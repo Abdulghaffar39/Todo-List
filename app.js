@@ -44,16 +44,47 @@ function signUp(e) {
 
   if (userName === '' || signUpEmail === '' || signUpPassword === '' || confirmPassword === '') {
 
-    alert('Please enter value');
+    alert('You did not enter a value in one or more boxes!');
     return;
   }
   else if (signUpPassword !== confirmPassword) {
 
-    alert('Match password!');
+    alert("These passwords don't match.");
+    return;
+  }
+
+  if(signUpEmail.indexOf('@gmail.com') === -1){
+
+    alert("You spelled the email correctly.");
     return;
   }
 
   let obj = JSON.parse(window.localStorage.getItem('SignUp')) || [];
+
+
+  let isFound = false;
+
+  for (let i = 0; i < obj.length; i++) {
+
+
+    if (obj[i].signUpEmail === signUpEmail) {
+
+      alert('This Email Account is already exists!');
+
+      isFound = true;
+      return;
+    }
+
+
+  }
+
+  if (!isFound) {
+
+    alert('Account created successfuly');
+    window.location.href = 'Login.html';
+
+  }
+
 
   obj.push({
 
@@ -65,7 +96,30 @@ function signUp(e) {
 
   window.localStorage.setItem('SignUp', JSON.stringify(obj));
 
-  window.location.href = 'Login.html';
+  // let isFound = false;
+
+  // for(let i = 0; obj.length; i++){
+
+  //   if( obj[i].signUpEmail === signUpEmail){      
+  //     console.log(obj[i].signUpEmail);
+
+  //     alert('This Email Account is already exists!');
+
+  //     return;
+  //     isFound = true;
+
+  //   }
+  // }
+
+  // if(!isFound){
+
+  //   alert('Your account has been created. Successfully!');
+  //   window.location.href = 'Login.html';
+  // }
+
+
+
+
 
   document.getElementById("signUpForm").reset();
 }
@@ -121,7 +175,7 @@ function login(e) {
 
 
   let getValue = JSON.parse(window.localStorage.getItem('SignUp'))
-  
+
   let isFound = false;
 
   for (let i = 0; i < getValue.length; i++) {
@@ -130,18 +184,20 @@ function login(e) {
 
       alert('successfully!');
       isFound = true;
-      window.location.href = 'todo.html'
+      window.location.href = 'todoFront.html'
       break;
     }
 
-    
-  }
+
+  };
+
+
   if (!isFound) {
 
     alert('Incorrect Email or Password');
     return;
 
-  }
+  };
 
 
 
@@ -173,3 +229,10 @@ function login(e) {
 
 // }
 // =============================== Login Ended ==============================================
+
+
+
+
+// let main = document.getElementById('main')
+
+// main.style.overflow = 'scroll'

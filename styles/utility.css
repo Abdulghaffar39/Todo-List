@@ -14,11 +14,16 @@
 :root {
 
     --bg-dark: #121212;
+    --bg-dark-gray: #333333;
     --bg-black: rgb(33, 31, 32);
     --bg-white: #fbfbfb;
     --bg-blue: #8870ff;
     --bg-gray: #BFBFBF;
 
+}
+
+.dark-gray {
+    background-color: var(--bg-dark-gray);
 }
 
 .bg-blue {
@@ -45,10 +50,15 @@
 :root {
 
     --color-dark: #121212;
+    --color-dark-gray: #333333;
     --color-black: rgb(33, 31, 32);
     --color-white: #fbfbfb;
     --color-blue: rgb(114, 139, 173);
     --color-gray: #BFBFBF;
+}
+
+.color-dark-gray {
+    color: var(--color-dark-gray);
 }
 
 .color-blue {
