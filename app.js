@@ -273,20 +273,32 @@ let mainCenter = document.getElementById('mainCenter');
 let createList = document.getElementById('createList');
 let dateInput = document.getElementById('date');
 
+function timeAgo(date){
 
+  const now = new Date();
+  const diff  = Math.floor((now - date) / 1000);
+  console.log(diff);
+  
+  if (diff < 60) return "just now";
+  if (diff < 3600) return Math.floor(diff / 60) + " min ago";
+  if (diff < 86400) return Math.floor(diff / 3600) + " hours ago";
+  if (diff < 604800) return Math.floor(diff / 86400) + " days ago";
 
-
+  return date.toLocaleDateString();
+  
+}
 
 function create() {
-  
+
+  let createdAt = new Date();
   let date = new Date(dateInput.value);
-
+  
   if (!dateInput.value){
-
+    
     alert('Please select a date');
     return; 
   };
-
+  
   
   let options = { day: '2-digit', month: 'short', year: 'numeric' };
   let formatted = date.toLocaleDateString('en-GB', options);
@@ -298,10 +310,10 @@ function create() {
 
     createList.style.display = 'none';
     mainCenter.innerHTML += `
-              <div class="todoFront_Container_2" id="todoFront_Container_2">
+              <div class="todoFront_Container_2" id="todoFront_Container_2"  data-created="${createdAt}">
   
                   <div class="parent_1">
-  
+                  
                       <div class="child_1"><img src="./Assets/Images/shopping.png" width="100%" alt="todo"></div>
   
                       <div class="child_2">
@@ -310,12 +322,12 @@ function create() {
                           <p>${formatted}</p>
   
                           </div>
-  
+                          
                   </div>
   
                   <div class="parent_2">
   
-                      <div class="child_1"><button>Today</button></div>
+                      <div class="child_1"><button  class='createdText'>${timeAgo(createdAt)}</button></div>
                       <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
                       
                       </div>
@@ -326,7 +338,7 @@ function create() {
 
       createList.style.display = 'none';
       mainCenter.innerHTML += `
-              <div class="todoFront_Container_2">
+              <div class="todoFront_Container_2"  data-created="${createdAt}">
   
                   <div class="parent_1">
   
@@ -343,28 +355,36 @@ function create() {
                       
                       <div class="parent_2">
   
-                      <div class="child_1"><button>Today</button></div>
+                      <div class="child_1"><button  class='createdText'>${timeAgo(createdAt)}</button></div>
                       <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
   
                   </div>
   
               </div>`
-  }
-  else{
+    }
+    else{
 
     alert('Please select option');
     return;
-  }
+    }
 
   todo_Shopping.checked = false;
   todo_List.checked = false;
 };
 
+setInterval(() => {
+  document.querySelectorAll(".todoFront_Container_2").forEach(card => {
+    let createdAt = new Date(card.getAttribute("data-created"));
+    let textEl = card.querySelector(".createdText");
+    textEl.textContent = timeAgo(createdAt);
+  });
+}, 60000);
 
 
+// function todoFront(e){
 
-
-
+//   e.preventDefault()
+// }
 // =============================== todoFront Ended ==============================================
 
 
