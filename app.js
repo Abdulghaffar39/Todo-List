@@ -260,12 +260,152 @@ function createTodo() {
 }
 
 
-function cencel(){
+function cencel() {
 
   let createList = document.getElementById('createList');
 
   createList.style.display = 'none';
+
+}
+
+
+function create() {
+
+  let createList = document.getElementById('createList');
+  let todo_Shopping = document.getElementById('todo_Shopping');
+  let todo_List = document.getElementById('todo_List');
+
+  let mainCenter = document.getElementById('mainCenter');
+
+
+  createList.style.display = 'none';
   
+
+  
+
+  todo_Shopping.addEventListener( 'click', ()  => {
+    mainCenter.innerHTML += `
+              <div class="todoFront_Container_2" id="todoFront_Container_2">
+  
+                  <div class="parent_1">
+  
+                      <div class="child_1"><img src="./Assets/Images/shopping.png" width="100%" alt="todo"></div>
+  
+                      <div class="child_2">
+  
+                          <h1>Shopping List</h1>
+                          <p>10/Jan/2025</p>
+  
+                      </div>
+  
+                  </div>
+  
+                  <div class="parent_2">
+  
+                      <div class="child_1"><button>Today</button></div>
+                      <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+  
+                  </div>
+  
+              </div>
+  `
+    })
+  
+    todo_List.addEventListener( 'click', ()  => {
+  
+       mainCenter.innerHTML += `
+              <div class="todoFront_Container_2">
+  
+                  <div class="parent_1">
+  
+                      <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
+  
+                      <div class="child_2">
+  
+                          <h1>To Do List</h1>
+                          <p>10/Jan/2025</p>
+  
+                      </div>
+  
+                  </div>
+  
+                  <div class="parent_2">
+  
+                      <div class="child_1"><button>Today</button></div>
+                      <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+  
+                  </div>
+  
+              </div>
+  
+  `
+    })
+  
+  
+
+//   if (todo_Shopping) {
+
+    
+//     mainCenter.innerHTML += `
+//             <div class="todoFront_Container_2" id='todoList' >
+
+//                 <div class="parent_1">
+
+//                     <div class="child_1"><img src="./Assets/Images/shopping.png" width="100%" alt="todo"></div>
+
+//                     <div class="child_2">
+
+//                         <h1>Shopping List</h1>
+//                         <p>10/Jan/2025</p>
+
+//                     </div>
+
+//                 </div>
+
+//                 <div class="parent_2">
+
+//                     <div class="child_1"><button>Today</button></div>
+//                     <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+
+//                 </div>
+
+//             </div>
+// `
+//   }
+
+//   else if (todo_List){
+
+// console.log(todo_Shopping);
+//     console.log(todo_List);
+
+//      mainCenter.innerHTML += `
+//             <div class="todoFront_Container_2" id='todoShopping'>
+
+//                 <div class="parent_1">
+
+//                     <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
+
+//                     <div class="child_2">
+
+//                         <h1>To Do List</h1>
+//                         <p>10/Jan/2025</p>
+
+//                     </div>
+
+//                 </div>
+
+//                 <div class="parent_2">
+
+//                     <div class="child_1"><button>Today</button></div>
+//                     <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
+
+//                 </div>
+
+//             </div>
+
+// `
+//   }
+
 }
 
 
@@ -277,4 +417,5 @@ function cencel(){
 
 // let main = document.getElementById('main')
 
+  
 // main.style.overflow = 'scroll'
