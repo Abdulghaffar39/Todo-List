@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 body {
@@ -64,7 +64,7 @@ body {
 .welcomeContainer_1 {
 
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -1140,7 +1140,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .todoFront_Container_1 .parent_1 .child_1 {
@@ -1168,7 +1168,6 @@ body {
     margin: 0;
     font-size: 30px;
     font-weight: 600;
-    line-height: 1.2;
 }
 
 .todoFront_Container_1 .parent_1 .child_2 p {
@@ -1193,6 +1192,8 @@ body {
 
 
 
+
+
 .todoFront_Container_2 {
 
     width: 100%;
@@ -1209,7 +1210,7 @@ body {
 
 .todoFront_Container_2 .parent_1 {
 
-    width: 80%;
+    width: 50%;
 
     display: flex;
     flex-direction: row;
@@ -1219,82 +1220,148 @@ body {
 
 .todoFront_Container_2 .parent_1 .child_1 {
 
-    width: 9%;
+    width: 14%;
+    height: 50px;
+}
+
+.todoFront_Container_2 .parent_1 .child_1 i {
+
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    font-size: 28px;
+    color: var(--bg-white);
+    background-color: var(--bg-dark-gray);
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .todoFront_Container_2 .parent_1 .child_2 {
 
-    width: 50%;
+    width: 90%;
     overflow: hidden;
 }
 
-.todoFront_Container_2 .parent_1 .child_1 img {
+.todoFront_Container_2 .parent_1 .child_2 .grandChild_1 {
 
-    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+}
+
+.todoFront_Container_2 .parent_1 .child_2 .grandChild_1 button {
+
+    width: 150px;
+    height: 30px;
+    cursor: auto;
+    border-style: none;
+    border-radius: 4px;
+    color: var(--color-white);
+    background-color: var(--bg-dark-gray);
 }
 
 .todoFront_Container_2 .parent_2 {
 
-    width: 20%;
+    width: 10%;
 
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
 
-.todoFront_Container_2 .parent_2 .child_1 {
+.todoFront_Container_2 .parent_2 div i {
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.todoFront_Container_2 .parent_2 div i {
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.todoFront_Container_2 .parent_2 #menu2 {
+
+    display: none;
+}
+
+
+
+
+.todoFront_Container_2 .parent_2 .menu_box {
 
     width: 150px;
-    height: 35px;
-}
-
-.todoFront_Container_2 .parent_2 .child_1 button {
-    
-    width: 100%;
-    height: 100%;
-    cursor:auto;
-    border-style: none;
-    border-radius: 6px;
-    color: var(--color-white);
-    background-color: var(--bg-dark-gray);
-}
-
-.todoFront_Container_2 .parent_2 .child_2 {
-
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-
-   
-}
-
-.todoFront_Container_2 .parent_2 .child_2 .menu_box {
-
-    width: 140px;
-    height: 140px;
-    border-radius: 28px;
+    height: 60px;
+    padding: 0px 20px;
+    border-radius: 14px;
     color: var(--color-white);
     background-color: var(--bg-dark-gray);
 
     position: relative;
-    right: 280px;
+    top: 5px;
+    right: 65px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.todoFront_Container_2 .parent_2 .child_2 .menu_box div {
+.todoFront_Container_2 .parent_2 .menu_box div {
 
     width: 100%;
     height: 50px;
+    cursor: pointer;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
+
+.todoFront_Container_2 .parent_2 .menu_box div i {
+
+    width: 30%;
+    height: 100%;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoFront_Container_2 .parent_2 .menu_box div p {
+
+    margin: 0;
+    width: 70%;
+    height: 100%;
+    font-size: 22px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.todoFront_Container_2 .parent_2 .menu_box .child_1 p {
+
+    cursor: pointer;
+}
+
+.todoFront_Container_2 .parent_2 .menu_box .child_2 p {
+
+    cursor: pointer;
+}
+
+
+
+
+
 
 .todoFront_Container_3 {
 
@@ -1493,8 +1560,6 @@ body {
     font-weight: 400;
 }
 
-
-
 .createList .box_CreateList .parent_1 .child_1 {
 
     width: 100%;
@@ -1522,6 +1587,8 @@ body {
     box-shadow: 8px 8px 5px black;
     /* border-style: none; */
 }
+
+
 
 
 .createList .box_CreateList .parent_2 {
@@ -2001,41 +2068,91 @@ body {
         font-size: 22px;
     }
 
-    
+
+
+
 
     .todoFront_Container_2 {
 
         width: 100%;
     }
 
-    .todoFront_Container_2 .parent_1{
+    .todoFront_Container_2 .parent_1 {
 
         width: 60%;
     }
 
-    .todoFront_Container_2 .parent_1 .child_1{
+    .todoFront_Container_2 .parent_1 .child_2 {
 
-        width: 15%;
+        width: 90%;
+        overflow: hidden;
     }
 
-    .todoFront_Container_2 .parent_1 .child_2{
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 {
 
-        width: 85%;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 button {
+
+        width: 150px;
+        height: 30px;
+        cursor: auto;
+        border-style: none;
+        border-radius: 4px;
+        color: var(--color-white);
+        background-color: var(--bg-dark-gray);
     }
 
     .todoFront_Container_2 .parent_2 {
 
-        width: 40%;
-    }
-
-    .todoFront_Container_2 .parent_2 .child_2 {
-
-        width: 30%;
-    }
-
-    .todoFront_Container_2 .parent_2 .child_2 {
-
         width: 10%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todoFront_Container_2 .parent_2 div i {
+
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box {
+
+        position: relative;
+        top: 5px;
+        right: 65px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box div {
+
+        width: 100%;
+        height: 50px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box div i {
+
+        font-size: 16px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box div p {
+
+        font-size: 20px;
+
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box .child_1 p,
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box .child_2 p {
+
+        cursor: pointer;
     }
 
 
@@ -2057,11 +2174,11 @@ body {
         align-items: center;
     }
 
-
     .createList .box_CreateList {
 
         width: 50%;
     }
+
 
     /*=================================== todoFront.html ended =====================================*/
 
@@ -2309,24 +2426,24 @@ body {
     }
 
 
- 
+
 
     .todoFront_Container_2 {
 
         width: 100%;
     }
 
-    .todoFront_Container_2 .parent_1{
+    .todoFront_Container_2 .parent_1 {
 
         width: 65%;
     }
 
-    .todoFront_Container_2 .parent_1 .child_1{
+    .todoFront_Container_2 .parent_1 .child_1 {
 
         width: 15%;
     }
 
-    .todoFront_Container_2 .parent_1 .child_2{
+    .todoFront_Container_2 .parent_1 .child_2 {
 
         width: 90%;
     }
@@ -2334,6 +2451,11 @@ body {
     .todoFront_Container_2 .parent_2 {
 
         width: 35%;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_1 button {
+
+        font-size: 12px;
     }
 
     .todoFront_Container_2 .parent_2 .child_2 {
@@ -2346,6 +2468,91 @@ body {
         width: 15%;
     }
 
+
+
+
+
+    .todoFront_Container_2 {
+
+        width: 100%;
+    }
+
+    .todoFront_Container_2 .parent_1 {
+
+        width: 80%;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 {
+
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 {
+
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 button {
+
+        width: 150px;
+        height: 30px;
+        cursor: auto;
+        border-style: none;
+        border-radius: 4px;
+        color: var(--color-white);
+        background-color: var(--bg-dark-gray);
+    }
+
+    .todoFront_Container_2 .parent_2 {
+
+        width: 10%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todoFront_Container_2 .parent_2 div i {
+
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+    .todoFront_Container_2 .parent_2 .menu_box {
+
+        width: 100px;
+        height: 60px;
+        padding: 0px 0px;
+        border-radius: 10px;
+
+        position: relative;
+        top: 5px;
+        right: 45px;
+
+        justify-content: center;
+    }
+
+    .todoFront_Container_2 .parent_2 .menu_box div {
+
+        width: 100%;
+        height: 40px;
+    }
+
+    .todoFront_Container_2 .parent_2 .menu_box div i {
+
+        font-size: 16px;
+    }
+
+    .todoFront_Container_2 .parent_2 .menu_box div p {
+
+        font-size: 20px;
+    }
 
 
 
@@ -2538,90 +2745,105 @@ body {
 
     /*================================= todoFront.html started ===================================*/
 
-    .todoFront_Container_2 .parent_1 {
 
-        width: 70%;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_1 {
-
-        width: 15%;
-    }
-
- 
 
     .todoFront_Container_2 {
 
         width: 100%;
     }
 
-    .todoFront_Container_2 .parent_1{
+    .todoFront_Container_2 .parent_1 {
 
-        width: 60%;
+        width: 90%;
+        gap: 4px;
     }
-
-    .todoFront_Container_2 .parent_1 .child_1{
-
-        width: 15%;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_2{
-
-        width: 80%;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_2 h1{
-
-        font-size: 22px;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_2 p{
-
-        font-size: 12px;
-    }
-
-    .todoFront_Container_2 .parent_2{
-
-        width: 40%;
-    }
-
-    .todoFront_Container_2 .parent_2 .child_1{
-
-        width: 30%;
-    }
-
-    .todoFront_Container_2 .parent_2 .child_1 button{
-
-        font-size: 12px;
-    }
-
-    .todoFront_Container_2 .parent_2 .child_2{
-
-        width: 10%;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-
-    .todoFront_Container_2 .parent_2 .child_1 {
-
-        width: 70%;
-    }
-
-    .todoFront_Container_2 .parent_2 .child_2 {
-
-        width: 30%;
-    }
-
 
     .todoFront_Container_2 .parent_1 .child_2 {
 
-        width: 85%;
+        width: 90%;
         overflow: hidden;
     }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 {
+
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 p {
+
+        width: 50%;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 button {
+
+        width: 100px;
+        height: 30px;
+        cursor: auto;
+        font-size: 12px;
+        border-style: none;
+        border-radius: 4px;
+        color: var(--color-white);
+        background-color: var(--bg-dark-gray);
+    }
+
+    .todoFront_Container_2 .parent_2 {
+
+        width: 10%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todoFront_Container_2 .parent_2 div i {
+
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box {
+
+        position: relative;
+        top: 12px;
+        right: 65px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box div {
+
+        width: 100%;
+        height: 50px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box div i {
+
+        font-size: 16px;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box div p {
+
+        font-size: 20px;
+
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box .child_2 {
+
+        position: relative;
+        top: 0;
+    }
+
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box .child_1 p,
+    .todoFront_Container_2 .parent_2 .child_2 .menu_box .child_2 p {
+
+        cursor: pointer;
+    }
+
+
 
     /*================================= todoFront.html ended ===================================*/
 
@@ -3060,35 +3282,69 @@ body {
 
 
 
+    
+.todoFront_Container_2 .parent_1 .child_1 {
+
+    width: 14%;
+    height: 50px;
+}
+
+.todoFront_Container_2 .parent_1 .child_1 i {
+
+    font-size: 22px;
+}
+
+    .todoFront_Container_2 {
+
+        width: 100%;
+    }
+
     .todoFront_Container_2 .parent_1 {
 
-        width: 60%;
+        width: 80%;
     }
 
-    .todoFront_Container_2 .parent_1 .child_1 {
+    .todoFront_Container_2 .parent_1 .child_2 {
 
-        width: 15%;
+        width: 90%;
+        overflow: hidden;
     }
 
-    .todoFront_Container_2 .parent_1 .child_2 h1 {
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 {
 
-        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 button {
+
+        width: 100px;
+        height: 30px;
+        cursor: auto;
+        font-size: 12px;
+        border-style: none;
+        border-radius: 4px;
+        color: var(--color-white);
+        background-color: var(--bg-dark-gray);
     }
 
     .todoFront_Container_2 .parent_2 {
 
-        width: 40%;
+        width: 10%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .todoFront_Container_2 .parent_2 .child_1 {
+    .todoFront_Container_2 .parent_2 div i {
 
-        width: 70%;
+        font-size: 30px;
+        cursor: pointer;
     }
 
-    .todoFront_Container_2 .parent_2 .child_2 {
-
-        width: 20%;
-    }
 
 
 
@@ -3454,75 +3710,85 @@ body {
     }
 
 
+
+
+    
+.todoFront_Container_2 .parent_1 .child_1 {
+
+    width: 18%;
+    height: 50px;
+}
+
+.todoFront_Container_2 .parent_1 .child_1 i {
+
+    font-size: 20px;
+}
+
     .todoFront_Container_2 {
 
-        gap: 5px;
-        padding-bottom: 15px;
+        width: 100%;
     }
 
     .todoFront_Container_2 .parent_1 {
 
-        gap: 10px;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_1 {
-
-        width: 35px;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_1 img {
-
-        border-radius: 6px;
+        width: 90%;
+        gap: 4px;
     }
 
     .todoFront_Container_2 .parent_1 .child_2 {
 
-        width: 140px;
+        width: 90%;
         overflow: hidden;
     }
 
-    .todoFront_Container_2 .parent_1 .child_2 h1 {
-
-        font-size: 14px;
-        height: 100%;
-    }
-
-    .todoFront_Container_2 .parent_1 .child_2 p {
-
-        font-size: 12px;
-        margin: 0;
-        line-height: 1.2;
-    }
-
-    .todoFront_Container_2 .parent_2 {
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 {
 
         display: flex;
         flex-direction: row;
         align-items: start;
-        gap: 3px;
+        gap: 20px;
     }
 
-    .todoFront_Container_2 .parent_2 .child_1 {
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 p {
 
-        overflow: hidden;
-        
+        width: 50%;
     }
 
-    .todoFront_Container_2 .parent_2 .child_1 button {
+    .todoFront_Container_2 .parent_1 .child_2 .grandChild_1 button {
 
-        border-radius: 4px;
+        width: 100px;
+        height: 30px;
+        cursor: auto;
         font-size: 12px;
+        border-style: none;
+        border-radius: 4px;
+        color: var(--color-white);
+        background-color: var(--bg-dark-gray);
     }
 
-    .todoFront_Container_2 .parent_2 .child_2 {
+    .todoFront_Container_2 .parent_2 {
 
-        width: 25px;
+        width: 10%;
 
         display: flex;
-        justify-content: center;
-        align-items: start  ;
+        flex-direction: column;
+        align-items: center;
     }
 
+    .todoFront_Container_2 .parent_2 div i {
+
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+
+    .todoFront_Container_2 .parent_2 .child_2 i {
+
+        font-size: 20px;
+
+    }
 
 
     .createList .box_CreateList {

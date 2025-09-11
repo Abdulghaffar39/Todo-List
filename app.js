@@ -10,18 +10,28 @@ function submit() {
   let deleteButton = document.createElement('button');
   let del = document.createTextNode('Delete');
 
-  editButton.addEventListener('click', (Event) => {
 
-    let editValue = prompt('Edit your Value');
-    li.innerHTML = editValue
+editButton.addEventListener('click', () => {
 
-  });
+  let editValue = prompt('Edit your Value', li.firstChild.textContent);
 
-  deleteButton.addEventListener('click', (Event) => {
+  if (editValue !== null && editValue.trim() !== "") {
+    li.firstChild.textContent = editValue;
+  }
 
-    ul.remove(li);
+});
 
-  });
+
+
+deleteButton.addEventListener('click', () => {
+
+  li.remove();
+  editButton.remove();
+  deleteButton.remove();
+
+});
+
+
 
   deleteButton.appendChild(del);
   editButton.appendChild(edit);
@@ -182,7 +192,7 @@ function login(e) {
 
     if (getValue[i].signUpEmail === loginEmail && getValue[i].signUpPassword === loginPassword) {
 
-      alert('successfully!');
+      alert('Logged in successfully!');
       isFound = true;
       window.location.href = 'todoFront.html'
       break;
@@ -254,7 +264,6 @@ function plusImgBlue() {
 
 function createTodo() {
 
-  let createdlist = document.getElementById('createdlist');
   createList.style.display = 'block'
   createList.style.display = 'flex'
 }
@@ -277,7 +286,6 @@ function timeAgo(date){
 
   const now = new Date();
   const diff  = Math.floor((now - date) / 1000);
-  console.log(diff);
   
   if (diff < 60) return "just now";
   if (diff < 3600) return Math.floor(diff / 60) + " min ago";
@@ -291,76 +299,122 @@ function timeAgo(date){
 function create() {
 
   let createdAt = new Date();
-  let date = new Date(dateInput.value);
   
   if (!dateInput.value){
     
     alert('Please select a date');
     return; 
   };
-  
+
+  let parts = dateInput.value.split("-");
+  let date = new Date(parts[0], parts[1] - 1, parts[2]);
   
   let options = { day: '2-digit', month: 'short', year: 'numeric' };
   let formatted = date.toLocaleDateString('en-GB', options);
   
-  console.log(formatted);
-  
     
-    if (todo_Shopping.checked && formatted) {
+    if (todo_Shopping.checked) {
 
     createList.style.display = 'none';
     mainCenter.innerHTML += `
-              <div class="todoFront_Container_2" id="todoFront_Container_2"  data-created="${createdAt}">
-  
-                  <div class="parent_1">
-                  
-                      <div class="child_1"><img src="./Assets/Images/shopping.png" width="100%" alt="todo"></div>
-  
-                      <div class="child_2">
-  
-                          <h1>Shopping List</h1>
-                          <p>${formatted}</p>
-  
-                          </div>
-                          
-                  </div>
-  
-                  <div class="parent_2">
-  
-                      <div class="child_1"><button  class='createdText'>${timeAgo(createdAt)}</button></div>
-                      <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
-                      
-                      </div>
-                      
-      </div>`
+              <div class="todoFront_Container_2" id="todoFront_Container_2" data-created="${createdAt}">
+
+                <div class="parent_1">
+
+                    <div class="child_1"><i class="fa-solid fa-cart-shopping" width='100%'></i></div>
+
+                    <div class="child_2">
+
+                        <h1>Shopping List</h1>
+
+                        <div class="grandChild_1">
+
+                            <p>${formatted}</p>
+                            <button class='createdText'>${timeAgo(createdAt)}</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="parent_2">
+
+                    <div class="icon menu-open">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+
+                    <div class="icon menu-close" style="display:none;">
+                    <i class="fa-solid fa-x"></i> 
+                    </div>
+
+                    <div class="menu_box" id='menu_box'>
+
+
+                        <div class="child_2 delete">
+
+                            <i class="fa-solid fa-trash"></i>
+                            <p>Delete</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>`
     }
-    else if (todo_List.checked && formatted) {
+    else if (todo_List.checked) {
 
       createList.style.display = 'none';
       mainCenter.innerHTML += `
-              <div class="todoFront_Container_2"  data-created="${createdAt}">
-  
-                  <div class="parent_1">
-  
-                      <div class="child_1"><img src="./Assets/Images/book.png" width="100%" alt="todo"></div>
-  
-                      <div class="child_2">
-  
-                          <h1>To Do List</h1>
-                          <p>${formatted}</p>
-  
-                      </div>
-  
-                      </div>
-                      
-                      <div class="parent_2">
-  
-                      <div class="child_1"><button  class='createdText'>${timeAgo(createdAt)}</button></div>
-                      <div class="child_2"><img src="./Assets/Images/upper three dots.png" width="100%" alt=""></div>
-  
-                  </div>
-  
-              </div>`
+              <div class="todoFront_Container_2" id="todoFront_Container_2" data-created="${createdAt}">
+
+                <div class="parent_1">
+
+                    <div class="child_1"><i class="fas fa-tasks"></i></div>
+
+                    <div class="child_2">
+
+                        <h1>To Do List</h1>
+
+                        <div class="grandChild_1">
+
+                            <p>${formatted}</p>
+                            <button class='createdText'>${timeAgo(createdAt)}</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="parent_2">
+
+                    <div class="icon menu-open">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+
+                    <div class="icon menu-close" style="display:none;">
+                    <i class="fa-solid fa-x"></i> 
+                    </div>
+
+                    <div class="menu_box" id='menu_box'>
+
+                        <div class="child_2 delete">
+
+                            <i class="fa-solid fa-trash"></i>
+                            <p>Delete</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>`
     }
     else{
 
@@ -381,10 +435,32 @@ setInterval(() => {
 }, 60000);
 
 
-// function todoFront(e){
+mainCenter.addEventListener("click", (e) => {
+  // Open menu
+  if (e.target.closest(".menu-open")) {
+    let parent = e.target.closest(".parent_2");
+    parent.querySelector(".menu_box").style.display = "flex";
+    parent.querySelector(".menu-open").style.display = "none";
+    parent.querySelector(".menu-close").style.display = "flex";
+  }
 
-//   e.preventDefault()
-// }
+  // Close menu
+  if (e.target.closest(".menu-close")) {
+    let parent = e.target.closest(".parent_2");
+    parent.querySelector(".menu_box").style.display = "none";
+    parent.querySelector(".menu-open").style.display = "flex";
+    parent.querySelector(".menu-close").style.display = "none";
+  }
+
+  // Delete todo
+  if (e.target.closest('.delete')) {
+    let card = e.target.closest('.todoFront_Container_2');
+    card.remove(); // pura card delete ho jayega
+  }
+
+});
+
+
 // =============================== todoFront Ended ==============================================
 
 
