@@ -194,6 +194,7 @@ function login(e) {
 
       alert('Logged in successfully!');
       isFound = true;
+      window.localStorage.setItem('currentUserTodo', JSON.stringify({ validUser: getValue[i] }))
       window.location.href = 'todoFront.html'
       break;
     }
@@ -243,44 +244,16 @@ function login(e) {
 
 // =============================== todoFront Started ==============================================
 
-function plusImgWhite() {
-
-  let plusImgWhite = document.getElementById('plusImgWhite');
-  let plusImgBlue = document.getElementById('plusImgBlue');
-
-  plusImgWhite.style.display = 'none';
-  plusImgBlue.style.display = 'block';
-}
-
-function plusImgBlue() {
-
-  let plusImgWhite = document.getElementById('plusImgWhite');
-  let plusImgBlue = document.getElementById('plusImgBlue');
-
-  plusImgWhite.style.display = 'block';
-  plusImgBlue.style.display = 'none';
-
-}
-
-function createTodo() {
-
-  createList.style.display = 'block'
-  createList.style.display = 'flex'
-}
-
-
-function cencel() {
-  
-  let createList = document.getElementById('createList');
-  createList.style.display = 'none';
-};
-
-
 let todo_Shopping = document.getElementById('todo_Shopping');
 let todo_List = document.getElementById('todo_List');
 let mainCenter = document.getElementById('mainCenter');
 let createList = document.getElementById('createList');
 let dateInput = document.getElementById('date');
+let headC1 = document.getElementById('headC1');
+getValue = JSON.parse(window.localStorage.getItem('SignUp'))
+
+
+// headC1.innerHTML = `Hey, ${}`;
 
 function timeAgo(date){
 
@@ -291,7 +264,7 @@ function timeAgo(date){
   if (diff < 3600) return Math.floor(diff / 60) + " min ago";
   if (diff < 86400) return Math.floor(diff / 3600) + " hours ago";
   if (diff < 604800) return Math.floor(diff / 86400) + " days ago";
-
+  
   return date.toLocaleDateString();
   
 }
@@ -299,6 +272,10 @@ function timeAgo(date){
 function create() {
 
   let createdAt = new Date();
+  let parts = dateInput.value.split("-");
+  let date = new Date(parts[0], parts[1] - 1, parts[2]);
+  let options = { day: '2-digit', month: 'short', year: 'numeric' };
+  let formatted = date.toLocaleDateString('en-GB', options);
   
   if (!dateInput.value){
     
@@ -306,19 +283,13 @@ function create() {
     return; 
   };
 
-  let parts = dateInput.value.split("-");
-  let date = new Date(parts[0], parts[1] - 1, parts[2]);
-  
-  let options = { day: '2-digit', month: 'short', year: 'numeric' };
-  let formatted = date.toLocaleDateString('en-GB', options);
-  
     
-    if (todo_Shopping.checked) {
+  if (todo_Shopping.checked) {
 
     createList.style.display = 'none';
     mainCenter.innerHTML += `
               <div class="todoFront_Container_2" id="todoFront_Container_2" data-created="${createdAt}">
-
+              
                 <div class="parent_1">
 
                     <div class="child_1"><i class="fa-solid fa-cart-shopping" width='100%'></i></div>
@@ -436,6 +407,7 @@ setInterval(() => {
 
 
 mainCenter.addEventListener("click", (e) => {
+
   // Open menu
   if (e.target.closest(".menu-open")) {
     let parent = e.target.closest(".parent_2");
@@ -460,6 +432,52 @@ mainCenter.addEventListener("click", (e) => {
 
 });
 
+function plusImgWhite() {
+
+  let plusImgWhite = document.getElementById('plusImgWhite');
+  let plusImgBlue = document.getElementById('plusImgBlue');
+
+  plusImgWhite.style.display = 'none';
+  plusImgBlue.style.display = 'block';
+}
+
+function plusImgBlue() {
+
+  let plusImgWhite = document.getElementById('plusImgWhite');
+  let plusImgBlue = document.getElementById('plusImgBlue');
+
+  plusImgWhite.style.display = 'block';
+  plusImgBlue.style.display = 'none';
+
+}
+
+function createTodo() {
+
+  createList.style.display = 'block'
+  createList.style.display = 'flex'
+}
+
+function cencel() {
+  
+  let createList = document.getElementById('createList');
+  createList.style.display = 'none';
+};
+
+let paraC1 = document.getElementById('paraC1');
+function todoFront(){
+
+  let user = JSON.parse(window.localStorage.getItem('currentUserTodo'));
+
+
+  console.log(user);
+
+  let headC1 = document.getElementById('headC1');
+
+  headC1.innerHTML = `Hey, ${user.validUser.userName}`;
+  
+  paraC1.innerHTML = user.validUser.userName[0];
+  
+}
 
 // =============================== todoFront Ended ==============================================
 
@@ -468,5 +486,4 @@ mainCenter.addEventListener("click", (e) => {
 
 // let main = document.getElementById('main')
 
-  
 // main.style.overflow = 'scroll'
