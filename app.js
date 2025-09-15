@@ -290,7 +290,7 @@ function create() {
     mainCenter.innerHTML += `
               <div class="todoFront_Container_2" id="todoFront_Container_2" data-created="${createdAt}">
               
-                <div class="parent_1">
+                <div class="parent_1"  onclick="todoBox()">
 
                     <div class="child_1"><i class="fa-solid fa-cart-shopping" width='100%'></i></div>
 
@@ -342,7 +342,7 @@ function create() {
       mainCenter.innerHTML += `
               <div class="todoFront_Container_2" id="todoFront_Container_2" data-created="${createdAt}">
 
-                <div class="parent_1">
+                <div class="parent_1" onclick="todoBox()">
 
                     <div class="child_1"><i class="fas fa-tasks"></i></div>
 
@@ -439,7 +439,7 @@ function plusImgWhite() {
 
   plusImgWhite.style.display = 'none';
   plusImgBlue.style.display = 'block';
-}
+};
 
 function plusImgBlue() {
 
@@ -449,7 +449,7 @@ function plusImgBlue() {
   plusImgWhite.style.display = 'block';
   plusImgBlue.style.display = 'none';
 
-}
+};
 
 function createTodo() {
 
@@ -463,21 +463,26 @@ function cencel() {
   createList.style.display = 'none';
 };
 
-let paraC1 = document.getElementById('paraC1');
+function todoBox(){
+
+  window.location.href = "todo_List.html";
+}
+
+
 function todoFront(){
+
+  let paraC1 = document.getElementById('paraC1');
+  let headC1 = document.getElementById('headC1');
 
   let user = JSON.parse(window.localStorage.getItem('currentUserTodo'));
 
-
-  console.log(user);
-
-  let headC1 = document.getElementById('headC1');
-
   headC1.innerHTML = `Hey, ${user.validUser.userName}`;
-  
   paraC1.innerHTML = user.validUser.userName[0];
   
+  
 }
+
+
 
 // =============================== todoFront Ended ==============================================
 
