@@ -1,27 +1,14 @@
-const express = require("express");
-
+const { log } = require('console');
+const express = require('express');
 const app = express();
-const PORT = 3000;
 
-app.use(express.json());
-app.use(express.static('public')); // new
-app.use(express.urlencoded({ extended: true }));
+const PORT = 3000 || process.env.PORT;
+
+app.use = (express.json());
 
 
-app.get("/", (req, res, next) =>{
 
-    res.send('Hello world')
+app.listen(PORT, (req, res, next) => {
+
+    console.log(`Server is running on ${PORT}`);
 });
-
-app.post("/login", (req, res, next) =>{
-
-    res.send('create successfuly')
-});
-
-
-app.listen(PORT, () => [
-
-    console.log('server is connecting successfuly')
-    
-]);
-
