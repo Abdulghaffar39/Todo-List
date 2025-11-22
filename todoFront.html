@@ -5,162 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/utility.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body onload="todoFront()">
+<body onload="todoFront(); displayTodos();">
 
     <div class="main">
 
+        <!-- Header Section -->
         <div class="todoFront_Container_1">
-
             <div class="parent_1">
-
                 <div class="child_1">
-
                     <p class="paraC1" id="paraC1"></p>
-
                 </div>
-
                 <div class="child_2">
                     <h2 id="headC1"></h2>
                 </div>
-
             </div>
-
-            <div class="parent_2">
-
-                <img src="../Assets/Images/menu.png" width="100%" alt="Menu Button">
-
-            </div>
-
-
         </div>
 
+        <!-- Todo Cards Container -->
+        <div class="mainCenter" id="mainCenter"></div>
 
-
-        <div class="mainCenter" id="mainCenter">
-
-
-        </div>
-
-
-
+        <!-- New Todo / Create Post Button -->
         <div class="todoFront_Container_3">
-
-            <div class="parent_1" onmouseenter="plusImgWhite()" id="plusImgWhite">
-
-                <div class="child_1">
-                    <img src="../Assets/Images/white plus icon.png" alt="plus">
-                    <p>New Post</p>
-                </div>
-
-            </div>
-
-            <div class="parent_2" onmouseout="plusImgBlue()" onclick="createTodo()" id="plusImgBlue"
-                style="display: none;">
-
-                <div class="child_1">
-                    <img src="../Assets/Images/plus.png" alt="plus">
-                    <p>New Post</p>
-                </div>
-
-            </div>
-
+            <button id="newPostBtn" class="btn btn-primary">New Post</button>
         </div>
 
     </div>
 
-
-    <div class="createList" id="createList">
-
+    <!-- Create Todo Modal -->
+    <div class="createList" id="createList" style="display: none;">
         <div class="box_CreateList">
-
-            <div class="parent_1">
-
-                <!-- <div class="child_1">
-
-                    <label for="radio" class="label_1">Select List</label>
-
-                    <div>
-                        <input type="radio" name="radio" id="todo_List">
-                        <label for="todo_List">To Do List</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="radio" id="todo_Shopping">
-                        <label for="todo_Shopping">Shopping List</label>
-                    </div>
-
+            <form onsubmit="event.preventDefault(); create();">
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="Enter title" id="title" autocomplete="off">
                 </div>
-
-                <div class="child_2">
-
-                    <label for="radio" class="label_1">Select Date</label>
-
-                    <div class="grandChild_1">
-
-                        <div class="calender"><input type="date" placeholder="mm/dd/yyyy" name="date" id="date"></div>
-
-                    </div>
-
-                </div> -->
-
-                <form class="box_1" onsubmit="form(event)">
-
-                    <div class="parent" id="parent_1">
-
-                        <label for="title">Title</label>
-                        <input type="text" placeholder="Enter title" id="title">
-
-                    </div>
-
-                    <div class="parent" id="parent_2">
-
-                        <label for="author">Author</label>
-                        <input type="text" placeholder="Enter author name" id="author">
-
-                    </div>
-
-                    <div class="parent" id="parent_3">
-
-                        <label for="description">Description</label>
-                        <textarea name="description" placeholder="Write Description" rows="7"
-                            id="description"></textarea>
-
-                    </div>
-
-
-                </form>
-
-            </div>
-
-
-            <div class="parent_2">
-
-                <button class="cencel" onclick="cencel()">Cencel</button>
-                <button class="create" onclick="create()">Create</button>
-
-            </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" placeholder="Enter author name" id="author" autocomplete="off">
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <textarea placeholder="Write Description" rows="7" id="description" autocomplete="off"></textarea>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" onclick="closeModal()">Cancel</button>
+                    <button type="submit">Create</button>
+                </div>
+            </form>
         </div>
-
-
     </div>
 
-
-
     <script src="app.js"></script>
-    <script src="https://kit.fontawesome.com/1de706ad7b.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
