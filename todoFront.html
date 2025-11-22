@@ -30,8 +30,8 @@
 
                 <div class="child_2">
                     <h2 id="headC1"></h2>
-                    <p>You have 3 tasks left for today.</p>
                 </div>
+
             </div>
 
             <div class="parent_2">
@@ -47,7 +47,7 @@
 
         <div class="mainCenter" id="mainCenter">
 
-            
+
         </div>
 
 
@@ -58,16 +58,17 @@
 
                 <div class="child_1">
                     <img src="../Assets/Images/white plus icon.png" alt="plus">
-                    <p>Add New List</p>
+                    <p>New Post</p>
                 </div>
 
             </div>
 
-            <div class="parent_2" onmouseout="plusImgBlue()" onclick="createTodo()" id="plusImgBlue" style="display: none;">
+            <div class="parent_2" onmouseout="plusImgBlue()" onclick="createTodo()" id="plusImgBlue"
+                style="display: none;">
 
                 <div class="child_1">
                     <img src="../Assets/Images/plus.png" alt="plus">
-                    <p>Add New List</p>
+                    <p>New Post</p>
                 </div>
 
             </div>
@@ -83,7 +84,7 @@
 
             <div class="parent_1">
 
-                <div class="child_1">
+                <!-- <div class="child_1">
 
                     <label for="radio" class="label_1">Select List</label>
 
@@ -109,7 +110,34 @@
 
                     </div>
 
-                </div>
+                </div> -->
+
+                <form class="box_1" onsubmit="form(event)">
+
+                    <div class="parent" id="parent_1">
+
+                        <label for="title">Title</label>
+                        <input type="text" placeholder="Enter title" id="title">
+
+                    </div>
+
+                    <div class="parent" id="parent_2">
+
+                        <label for="author">Author</label>
+                        <input type="text" placeholder="Enter author name" id="author">
+
+                    </div>
+
+                    <div class="parent" id="parent_3">
+
+                        <label for="description">Description</label>
+                        <textarea name="description" placeholder="Write Description" rows="7"
+                            id="description"></textarea>
+
+                    </div>
+
+
+                </form>
 
             </div>
 

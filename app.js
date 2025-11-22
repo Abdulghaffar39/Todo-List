@@ -11,25 +11,25 @@ function submit() {
   let del = document.createTextNode('Delete');
 
 
-editButton.addEventListener('click', () => {
+  editButton.addEventListener('click', () => {
 
-  let editValue = prompt('Edit your Value', li.firstChild.textContent);
+    let editValue = prompt('Edit your Value', li.firstChild.textContent);
 
-  if (editValue !== null && editValue.trim() !== "") {
-    li.firstChild.textContent = editValue;
-  }
+    if (editValue !== null && editValue.trim() !== "") {
+      li.firstChild.textContent = editValue;
+    }
 
-});
+  });
 
 
 
-deleteButton.addEventListener('click', () => {
+  deleteButton.addEventListener('click', () => {
 
-  li.remove();
-  editButton.remove();
-  deleteButton.remove();
+    li.remove();
+    editButton.remove();
+    deleteButton.remove();
 
-});
+  });
 
 
 
@@ -50,22 +50,16 @@ function signUp(e) {
   let userName = document.getElementById('userName').value;
   let signUpEmail = document.getElementById('signUpEmail').value;
   let signUpPassword = document.getElementById('signUpPassword').value;
-  let confirmPassword = document.getElementById('confirmPassword').value;
 
-  if (userName === '' || signUpEmail === '' || signUpPassword === '' || confirmPassword === '') {
+  if (userName === '' || signUpEmail === '' || signUpPassword === '') {
 
-    alert('You did not enter a value in one or more boxes!');
-    return;
-  }
-  else if (signUpPassword !== confirmPassword) {
-
-    alert("These passwords don't match.");
+    alert('Please fill form');
     return;
   }
 
   if (signUpEmail.indexOf('@gmail.com') === -1) {
 
-    alert("You spelled the email correctly.");
+    alert("Please enter correct Email");
     return;
   }
 
@@ -101,7 +95,6 @@ function signUp(e) {
     userName,
     signUpEmail,
     signUpPassword,
-    confirmPassword,
   });
 
   window.localStorage.setItem('SignUp', JSON.stringify(obj));
@@ -179,7 +172,7 @@ function login(e) {
 
   if (loginEmail === '' || loginPassword === '') {
 
-    alert('Please enter Email or Password');
+    alert('Please fill the form');
     return;
   }
 
@@ -190,13 +183,22 @@ function login(e) {
 
   for (let i = 0; i < getValue.length; i++) {
 
-    if (getValue[i].signUpEmail === loginEmail && getValue[i].signUpPassword === loginPassword) {
+    if (getValue[i].signUpEmail !== loginEmail && getValue[i].signUpPassword !== loginPassword) {
+
+      alert('Please enter correct Email or Password');
+      isFound = true;
+      window.localStorage.setItem('currentUserTodo', JSON.stringify({ validUser: getValue[i] }))
+      window.location.href = 'todoFront.html'
+      break;
+
+    } else if (getValue[i].signUpEmail === loginEmail && getValue[i].signUpPassword === loginPassword) {
 
       alert('Logged in successfully!');
       isFound = true;
       window.localStorage.setItem('currentUserTodo', JSON.stringify({ validUser: getValue[i] }))
       window.location.href = 'todoFront.html'
       break;
+
     }
 
 
@@ -255,35 +257,65 @@ getValue = JSON.parse(window.localStorage.getItem('SignUp'))
 
 // headC1.innerHTML = `Hey, ${}`;
 
-function timeAgo(date){
+function timeAgo(date) {
 
   const now = new Date();
-  const diff  = Math.floor((now - date) / 1000);
-  
+  const diff = Math.floor((now - date) / 1000);
+
   if (diff < 60) return "just now";
   if (diff < 3600) return Math.floor(diff / 60) + " min ago";
   if (diff < 86400) return Math.floor(diff / 3600) + " hours ago";
   if (diff < 604800) return Math.floor(diff / 86400) + " days ago";
-  
+
   return date.toLocaleDateString();
-  
+
 }
 
 function create() {
 
-  let createdAt = new Date();
-  let parts = dateInput.value.split("-");
-  let date = new Date(parts[0], parts[1] - 1, parts[2]);
-  let options = { day: '2-digit', month: 'short', year: 'numeric' };
-  let formatted = date.toLocaleDateString('en-GB', options);
-  
-  if (!dateInput.value){
-    
-    alert('Please select a date');
-    return; 
+  // let createdAt = new Date();
+  // let parts = dateInput.value.split("-");
+  // let date = new Date(parts[0], parts[1] - 1, parts[2]);
+  // let options = { day: '2-digit', month: 'short', year: 'numeric' };
+  // let formatted = date.toLocaleDateString('en-GB', options);
+
+  // if (!dateInput.value) {
+
+  //   alert('Please select a date');
+  //   return;
+  // };
+
+
+  let title = document.getElementById('title').value;
+  let author = document.getElementById('author').value;
+  let description = document.getElementById('description').value;
+
+  if (title === '' || author === '' || description === '') {
+    alert('Please fill all value');
+    return;
   };
 
-    
+  let blog_obj = JSON.parse(localStorage.getItem('UserValue')) || [];
+
+  let getValue = JSON.parse(window.localStorage.getItem('SignUp'))
+
+
+  blog_obj.push({
+
+    title: title,
+    author: author,
+    description: description,
+    email: getValue.validUser.email
+  });
+
+  localStorage.setItem('UserValue', JSON.stringify(blog_obj));
+
+
+  alert('Blog added successfully!');
+  window.location.href = 'home.html';
+  console.log(title);
+
+
   if (todo_Shopping.checked) {
 
     createList.style.display = 'none';
@@ -335,11 +367,11 @@ function create() {
                 </div>
 
             </div>`
-    }
-    else if (todo_List.checked) {
+  }
+  else if (todo_List.checked) {
 
-      createList.style.display = 'none';
-      mainCenter.innerHTML += `
+    createList.style.display = 'none';
+    mainCenter.innerHTML += `
               <div class="todoFront_Container_2" id="todoFront_Container_2" data-created="${createdAt}">
 
                 <div class="parent_1" onclick="todoBox()">
@@ -386,15 +418,15 @@ function create() {
                 </div>
 
             </div>`
-    }
-    else{
+  }
+  else {
 
     alert('Please select option');
     return;
-    }
+  }
 
-  todo_Shopping.checked = false;
-  todo_List.checked = false;
+  // todo_Shopping.checked = false;
+  // todo_List.checked = false;
 };
 
 setInterval(() => {
@@ -458,18 +490,18 @@ function createTodo() {
 }
 
 function cencel() {
-  
+
   let createList = document.getElementById('createList');
   createList.style.display = 'none';
 };
 
-function todoBox(){
+function todoBox() {
 
   window.location.href = "todo_List.html";
 }
 
 
-function todoFront(){
+function todoFront() {
 
   let paraC1 = document.getElementById('paraC1');
   let headC1 = document.getElementById('headC1');
@@ -478,8 +510,8 @@ function todoFront(){
 
   headC1.innerHTML = `Hey, ${user.validUser.userName}`;
   paraC1.innerHTML = user.validUser.userName[0];
-  
-  
+
+
 }
 
 
