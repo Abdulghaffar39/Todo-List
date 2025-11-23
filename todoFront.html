@@ -12,53 +12,84 @@
 
 <body onload="todoFront(); displayTodos();">
 
+    <div class="box_top"></div>
+
     <div class="main">
 
-        <!-- Header Section -->
         <div class="todoFront_Container_1">
+
             <div class="parent_1">
+
                 <div class="child_1">
-                    <p class="paraC1" id="paraC1"></p>
+
+                    <img src="./Assets//Images/person-removebg-preview.png" width="100%" alt="">
+
                 </div>
+
                 <div class="child_2">
+
                     <h2 id="headC1"></h2>
+
                 </div>
+
             </div>
+
         </div>
 
-        <!-- Todo Cards Container -->
         <div class="mainCenter" id="mainCenter"></div>
 
-        <!-- New Todo / Create Post Button -->
         <div class="todoFront_Container_3">
-            <button id="newPostBtn" class="btn btn-primary">New Post</button>
+
+            <button id="newPostBtn" class="btn">New Post</button>
+
         </div>
 
     </div>
 
     <!-- Create Todo Modal -->
+
     <div class="createList" id="createList" style="display: none;">
+
         <div class="box_CreateList">
+
             <form onsubmit="event.preventDefault(); create();">
+
                 <div>
+
                     <label for="title">Title</label>
                     <input type="text" placeholder="Enter title" id="title" autocomplete="off">
+
                 </div>
+
+
                 <div>
+
                     <label for="author">Author</label>
                     <input type="text" placeholder="Enter author name" id="author" autocomplete="off">
+
                 </div>
+
                 <div>
+                    
                     <label for="description">Description</label>
                     <textarea placeholder="Write Description" rows="7" id="description" autocomplete="off"></textarea>
+
                 </div>
+
                 <div class="modal-buttons">
+
                     <button type="button" onclick="closeModal()">Cancel</button>
                     <button type="submit">Create</button>
+
                 </div>
+
             </form>
+
         </div>
+
     </div>
+
+    <div class="box_bottom"></div>
 
     <script src="app.js"></script>
 </body>

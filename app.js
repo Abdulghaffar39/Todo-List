@@ -95,7 +95,9 @@ function login(e) {
   document.getElementById("loginForm").reset();
   window.location.href = 'todoFront.html';
 }
+
 /* =============================== TodoFront Page =============================== */
+
 function todoFront() {
   let currentUserData = JSON.parse(localStorage.getItem('currentUserTodo'));
   if (!currentUserData) {
@@ -140,6 +142,7 @@ function create() {
   let description = document.getElementById('description').value.trim();
 
   if (!title || !author || !description) {
+
     alert('Please fill all fields');
     return;
   }
@@ -162,14 +165,15 @@ function create() {
   closeModal();
   displayTodos();
 
-  title.value = '';
-  author.value = '';
-  description.value = '';
+  title = '';
+  author = '';
+  description = '';
 
 }
 
 /* =============================== Display Todos =============================== */
 function displayTodos() {
+
   let mainCenter = document.getElementById('mainCenter');
   mainCenter.innerHTML = ''; // Clear existing cards
 
@@ -186,31 +190,41 @@ function displayTodos() {
       card.dataset.created = createdAt;
 
       card.innerHTML = `
+
                 <div class="parent_1">
                     <h3>${todo.title}</h3> 
                     <small>${timeAgo(createdAt)}</small>
-                    </div>
+                </div>
                     <p>${todo.author}</p>
                     <p>${todo.description}</p>
                 <button class="deleteBtn">Delete</button>
+
             `;
 
       mainCenter.appendChild(card);
 
       // Delete button
       card.querySelector('.deleteBtn').addEventListener('click', () => {
+
         let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
         let newTodos = allTodos.filter(t => !(t.title === todo.title && t.email === currentUser.signUpEmail));
+
         localStorage.setItem('UserValue', JSON.stringify(newTodos));
         card.remove();
+
       });
     });
 }
 
 /* =============================== Update Time Ago Every Minute =============================== */
+
 setInterval(() => {
+
   document.querySelectorAll(".todoFront_Container_2").forEach(card => {
+
     let createdAt = new Date(card.dataset.created);
     card.querySelector('small').textContent = timeAgo(createdAt);
+
   });
+
 }, 60000);

@@ -8,15 +8,21 @@
 body {
 
     /* overflow: hidden; */
-    font-family: 'poppins';
+    font-family: 'poppins' !important;
     color: var(--color-white) !important;
     background-color: var(--bg-dark) !important;
+
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../Assets/fonts/poppins/Poppins-Regular.ttf);
 }
 
 /*================================ Index.html started =====================================*/
 .box_top {
 
-    z-index: 0;
+    z-index: -1000;
     width: 200px;
     height: 200px;
     background-color: var(--bg-blue);
@@ -211,7 +217,7 @@ body {
 
 /*========================= welcome.html ended ===============================*/
 
-/* ========== login.html started =====================================*/ 
+/* ========== login.html started =====================================*/
 
 .logo {
 
@@ -869,235 +875,308 @@ body {
 /*=================================== Sign up.html ended =====================================*/
 .main {
 
-max-width: 1200px;
-margin: auto;
-padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
 
+    z-index: 2000 !important;
 }
 
 /* =============================== Header Section =============================== */
 .todoFront_Container_1 {
 
-background-color: #8870ff;
-color: black;
-padding: 20px;
-border-radius: 10px;
-margin-bottom: 20px;
-
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #5471b8;
 }
 
 .parent_1 {
-display: flex;
-align-items: center;
-justify-content: space-between;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .child_1 {
-background-color: rgba(255, 255, 255, 0.3);
-width: 50px;
-height: 50px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 24px;
-font-weight: bold;
-color: black; /* Text color black */
 
+    width: 50px;
+    height: 50px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child_1 p {
+
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .child_2 h2 {
-margin: 0;
-font-size: 28px;
-color: black; /* Text color black */
+
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: black;
+    
 }
 
 /* =============================== Todo Cards =============================== */
 .mainCenter {
-display: flex;
-flex-direction: column;
-gap: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 .todoFront_Container_2 {
-background-color: white;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-color: black; /* Text color black */
+
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    z-index: 2000 !important;
+    background-color: rgb(221, 217, 217);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.todoFront_Container_2 h3 {
-margin: 0 0 10px 0;
-font-size: 22px;
-color: black; /* Text color black */
+.todoFront_Container_2 .parent_1 {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+}
+
+.todoFront_Container_2 .parent_1 h3 {
+
+    margin: 0;
+    line-height: 40px;
+
+    color: black;
+    font-size: 32px;
+    font-weight: 800;
 }
 
 .todoFront_Container_2 p {
-flex-grow: 1;
-font-size: 16px;
-color: black; /* Text color black */
+
+    flex-grow: 1;
+    font-size: 16px;
+    color: black;
 }
 
 .todoFront_Container_2 small {
-font-size: 14px;
-color: black; /* Text color black */
+
+    font-size: 14px;
+    color: black;
 }
 
 .deleteBtn {
-margin-top: 15px;
-align-self: flex-end;
-background-color: #dc3545;
-color: white;
-border: none;
-padding: 8px 15px;
-border-radius: 5px;
-cursor: pointer;
+    
+    margin-top: 15px;
+    align-self: flex-end;
+    background-color: #ad9295;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .deleteBtn {
-background-color: #c82333;
+
+    background-color: #d76772;
+    filter: blur(0.6px);
 }
 
 /* =============================== New Post Button =============================== */
-.todoFront_Container_3 {
 
+.todoFront_Container_3 {
+    
     position: fixed;
-    bottom: 30px;
     left: 46%;
-text-align: center;
-margin-top: 20px;
+    bottom: 30px;
+    
+    text-align: center;
+    margin-top: 20px;
+    z-index: 3000 !important;
 }
 
 #newPostBtn {
-padding: 10px 20px;
-font-size: 16px;
+
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: #5471b8;
 }
 
 /* =============================== Modal Styles =============================== */
+
 .createList {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: rgba(0,0,0,0.5);
-display: flex;
-align-items: center;
-justify-content: center;
-z-index: 999;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000 !important;
+
+}
+
+.createList {
+
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    color: #333;
 }
 
 .box_CreateList {
-    
-background-color: white;
-padding: 20px;
-border-radius: 10px;
-width: 90%;
-max-width: 500px;
-color: black; /* Text color black */
-margin: 90px auto;
+
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    color: black;
+    margin: 90px auto;
 
 }
 
 .box_CreateList form div {
-margin-bottom: 15px;
+
+    margin-bottom: 15px;
 }
 
 .box_CreateList label {
-display: block;
-margin-bottom: 5px;
-font-weight: bold;
-color: black; /* Text color black */
+
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
 }
 
 .box_CreateList input,
 .box_CreateList textarea {
-width: 100%;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-font-size: 16px;
-color: black; /* Text color black */
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aeaeae;
+    background-color: rgb(210, 206, 206);
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    /* Text color black */
 }
 
 .modal-buttons {
-display: flex;
-justify-content: flex-end;
-gap: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .modal-buttons button {
-padding: 8px 15px;
-border-radius: 5px;
-border: none;
-cursor: pointer;
+
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
 }
 
-.modal-buttons button[type="button"] {
-background-color: #6c757d;
-color: white;
-}
 
 .modal-buttons button[type="button"] {
-background-color: #4f5152;
+
+    background-color: rgb(146, 143, 143);
+    color: white;
 }
 
 .modal-buttons button[type="submit"] {
-background-color: #8870ff;
-color: white;
+
+    background-color: #5471b8;
+    color: white;
 }
 
-.modal-buttons button[type="submit"] {
-background-color: #8870ff;
-}
 
 /* =============================== Responsive Styles =============================== */
 @media (max-width: 768px) {
-.parent_1 {
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-}
+    
+    .parent_1 {
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 
-.child_1 {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-}
+    .child_1 {
 
-.child_2 h2 {
-    font-size: 24px;
-}
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 
-.todoFront_Container_2 h3 {
-    font-size: 20px;
-}
+    .child_2 h2 {
 
-.todoFront_Container_2 p {
-    font-size: 14px;
-}
+        font-size: 24px;
+    }
 
-.deleteBtn {
-    padding: 6px 12px;
-    font-size: 14px;
-}
+    .todoFront_Container_2 h3 {
+
+        font-size: 20px;
+    }
+
+    .todoFront_Container_2 p {
+
+        font-size: 14px;
+    }
+
+    .deleteBtn {
+
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 
 }
 
 @media (max-width: 480px) {
-.box_CreateList {
-width: 95%;
-padding: 15px;
-}
 
-#newPostBtn {
-    width: 100%;
-}
+    .box_CreateList {
+
+        width: 95%;
+        padding: 15px;
+    }
+
+    #newPostBtn {
+
+        width: 100%;
+    }
 
 }
-

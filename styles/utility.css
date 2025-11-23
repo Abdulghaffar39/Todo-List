@@ -1,14 +1,3 @@
-/* fonts started */
-@font-face {
-    font-family: 'poppins';
-    src: url(../Assets/fonts/poppins/Poppins-Regular.ttf);
-}
-
-.poppins {
-    font-family: 'poppins';
-}
-/* fonts ended */
-
 /* bg-color started */
 
 :root {
