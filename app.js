@@ -71,6 +71,7 @@ function signUp(e) {
 }
 
 /* =============================== Login =============================== */
+
 function login(e) {
   e.preventDefault();
 
@@ -99,11 +100,15 @@ function login(e) {
 /* =============================== TodoFront Page =============================== */
 
 function todoFront() {
+
   let currentUserData = JSON.parse(localStorage.getItem('currentUserTodo'));
+
   if (!currentUserData) {
+
     alert("Please login first");
     window.location.href = "Login.html";
     return;
+
   }
 
   let user = currentUserData.validUser;
@@ -112,6 +117,7 @@ function todoFront() {
 }
 
 /* =============================== New Post Modal =============================== */
+
 document.getElementById('newPostBtn').addEventListener('click', () => {
   document.getElementById('createList').style.display = 'block';
 });
@@ -121,7 +127,9 @@ function closeModal() {
 }
 
 /* =============================== Time Ago =============================== */
+
 function timeAgo(date) {
+
   const now = new Date();
   const diff = Math.floor((now - date) / 1000);
 
@@ -180,8 +188,7 @@ function displayTodos() {
   let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
   let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
 
-  todos
-    .filter(todo => todo.email === currentUser.signUpEmail)
+  todos.filter(todo => todo.email === currentUser.signUpEmail)
     .forEach(todo => {
       let createdAt = new Date(todo.createdAt);
 
@@ -192,11 +199,21 @@ function displayTodos() {
       card.innerHTML = `
 
                 <div class="parent_1">
+
                     <h3>${todo.title}</h3> 
                     <small>${timeAgo(createdAt)}</small>
+
                 </div>
-                    <p>${todo.author}</p>
-                    <p>${todo.description}</p>
+
+                <hr />
+
+                <div class="parent_2">
+
+                  <h4 class="para_1">${todo.author}</h4>
+                  <p class="para_2">${todo.description}</p>
+
+                </div>
+
                 <button class="deleteBtn">Delete</button>
 
             `;
@@ -228,3 +245,47 @@ setInterval(() => {
   });
 
 }, 60000);
+
+
+
+function searchIcon() {
+
+  let input = document.getElementById("inputSearch");
+
+  input.focus()
+
+}
+
+function search() {
+
+  let inputSearch = document.getElementById("inputSearch").value;
+
+  let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+
+  for (let i = 0; i < todos.length; i++) {
+
+
+
+    if (todos[i].title === inputSearch) {
+
+      console.log(todos[i].title);
+
+      let createdAt = new Date(todos[i].createdAt);
+
+      let card = document.createElement('div');
+      card.className = 'todoFront_Container_2';
+      card.dataset.created = createdAt;
+
+      card.innerHTML
+
+      mainCenter.appendChild(card);
+
+    };
+
+  }
+
+}
+
+
+
+
