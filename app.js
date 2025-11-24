@@ -353,3 +353,12 @@ function renderFiltered(list) {
     mainCenter.appendChild(card);
   });
 }
+
+
+function searchIcon(){
+
+  let inputSearch = document.getElementById("inputSearch");
+
+  inputSearch.focus()
+
+}
