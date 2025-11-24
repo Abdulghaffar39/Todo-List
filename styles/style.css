@@ -1091,6 +1091,18 @@ body {
 }
 
 
+.editBtn {
+
+    margin-top: 15px;
+    align-self: flex-end;
+    background-color: #6daf65;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .deleteBtn {
 
     margin-top: 15px;

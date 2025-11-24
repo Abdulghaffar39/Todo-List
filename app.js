@@ -1,4 +1,7 @@
-/* =============================== Submit Todo =============================== */
+/* =============================== GLOBAL EDIT INDEX =============================== */
+let editIndex = null;
+
+/* =============================== Submit Todo (Old Simple Todo Feature) =============================== */
 function submit() {
   let todoText = document.getElementById('text').value;
   let todoResult = document.getElementById('Result');
@@ -109,13 +112,14 @@ function todoFront() {
   document.getElementById('paraC1').textContent = user.userName[0];
 }
 
-/* =============================== New Post Modal =============================== */
+/* =============================== Modal =============================== */
 document.getElementById('newPostBtn').addEventListener('click', () => {
   document.getElementById('createList').style.display = 'block';
 });
 
 function closeModal() {
   document.getElementById('createList').style.display = 'none';
+  editIndex = null; // reset edit mode
 }
 
 /* =============================== Time Ago =============================== */
@@ -131,8 +135,9 @@ function timeAgo(date) {
   return date.toLocaleDateString();
 }
 
-/* =============================== Create Todo =============================== */
+/* =============================== Create OR Edit Todo =============================== */
 function create() {
+
   let title = document.getElementById('title').value.trim();
   let author = document.getElementById('author').value.trim();
   let description = document.getElementById('description').value.trim();
@@ -142,32 +147,47 @@ function create() {
     return;
   }
 
-  let blog_obj = JSON.parse(localStorage.getItem('UserValue')) || [];
-  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
-  let createdAt = new Date();
+  let todos = JSON.parse(localStorage.getItem("UserValue")) || [];
+  let currentUser = JSON.parse(localStorage.getItem("currentUserTodo")).validUser;
 
-  blog_obj.push({
-    title,
-    author,
-    description,
-    email: currentUser.signUpEmail,
-    createdAt: createdAt.toISOString()
-  });
+  // === UPDATE TODO ===
+  if (editIndex !== null) {
+    todos[editIndex] = {
+      title,
+      author,
+      description,
+      email: currentUser.signUpEmail,
+      createdAt: new Date().toISOString()
+    };
 
-  localStorage.setItem('UserValue', JSON.stringify(blog_obj));
+    editIndex = null;
+  }
+
+  // === CREATE NEW TODO ===
+  else {
+    todos.push({
+      title,
+      author,
+      description,
+      email: currentUser.signUpEmail,
+      createdAt: new Date().toISOString()
+    });
+  }
+
+  localStorage.setItem("UserValue", JSON.stringify(todos));
 
   closeModal();
   displayTodos();
 }
 
-/* =============================== Highlight Function =============================== */
+/* =============================== Highlight Text =============================== */
 function highlightText(text, search) {
   if (!search) return text;
   let reg = new RegExp(search, "gi");
   return text.replace(reg, match => `<span class="highlight">${match}</span>`);
 }
 
-/* =============================== Display Todos (FINAL SINGLE VERSION) =============================== */
+/* =============================== Display Todos =============================== */
 function displayTodos() {
   let mainCenter = document.getElementById('mainCenter');
   mainCenter.innerHTML = '';
@@ -177,7 +197,7 @@ function displayTodos() {
 
   todos
     .filter(todo => todo.email === currentUser.signUpEmail)
-    .forEach(todo => {
+    .forEach((todo, index) => {
       let createdAt = new Date(todo.createdAt);
 
       let card = document.createElement('div');
@@ -193,8 +213,8 @@ function displayTodos() {
         <hr />
 
         <div class="parent_2">
-          <h4 class="para_1">${todo.author}</h4>
-          <p class="para_2">${todo.description}</p>
+          <h4>${todo.author}</h4>
+          <p>${todo.description}</p>
         </div>
 
         <div class="btnBox">
@@ -205,37 +225,32 @@ function displayTodos() {
 
       mainCenter.appendChild(card);
 
-      /* ========== Delete Button ========== */
+      /* ========== DELETE ========== */
       card.querySelector('.deleteBtn').addEventListener('click', () => {
         let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
-        let newTodos = allTodos.filter(t =>
-          !(t.title === todo.title && t.email === currentUser.signUpEmail)
-        );
-
-        localStorage.setItem('UserValue', JSON.stringify(newTodos));
+        allTodos.splice(index, 1);
+        localStorage.setItem('UserValue', JSON.stringify(allTodos));
         displayTodos();
       });
 
-      /* ========== Edit Button ========== */
+      /* ========== EDIT ========== */
       card.querySelector('.editBtn').addEventListener('click', () => {
+
         document.getElementById('createList').style.display = 'block';
 
         document.getElementById('title').value = todo.title;
         document.getElementById('author').value = todo.author;
         document.getElementById('description').value = todo.description;
 
-        /* Remove old version */
-        let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
-        let remaining = allTodos.filter(t =>
-          !(t.title === todo.title && t.email === currentUser.signUpEmail)
+        let allTodos = JSON.parse(localStorage.getItem("UserValue")) || [];
+        editIndex = allTodos.findIndex(t =>
+          t.title === todo.title && t.email === currentUser.signUpEmail
         );
-
-        localStorage.setItem('UserValue', JSON.stringify(remaining));
       });
     });
 }
 
-/* =============================== Update Time Ago Every Minute =============================== */
+/* =============================== TimeAgo Auto Update =============================== */
 setInterval(() => {
   document.querySelectorAll(".todoFront_Container_2").forEach(card => {
     let createdAt = new Date(card.dataset.created);
@@ -243,7 +258,7 @@ setInterval(() => {
   });
 }, 60000);
 
-/* =============================== SEARCH WITH HIGHLIGHT =============================== */
+/* =============================== Search =============================== */
 function searchTodos() {
   let searchText = document.getElementById("inputSearch").value.toLowerCase();
   let mainCenter = document.getElementById('mainCenter');
@@ -281,7 +296,7 @@ function searchTodos() {
   });
 }
 
-/* =============================== FILTER =============================== */
+/* =============================== Filter =============================== */
 function toggleFilterMenu() {
   let menu = document.getElementById("filterMenu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
@@ -311,7 +326,7 @@ function filterToday() {
   toggleFilterMenu();
 }
 
-/* =============================== SORT FILTER HELPER =============================== */
+/* =============================== Sort Helper =============================== */
 function filterSort(type) {
   let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
   let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
@@ -327,7 +342,17 @@ function filterSort(type) {
   renderFiltered(filtered);
 }
 
-/* =============================== RENDER FILTERED =============================== */
+
+function filterAll() {
+  let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
+
+  let filtered = todos.filter(t => t.email === currentUser.signUpEmail); // all todos for current user
+  renderFiltered(filtered);
+}
+
+
+/* =============================== Render Filtered =============================== */
 function renderFiltered(list) {
   let mainCenter = document.getElementById('mainCenter');
   mainCenter.innerHTML = '';
@@ -354,11 +379,110 @@ function renderFiltered(list) {
   });
 }
 
+/* =============================== Search Icon Autofocus =============================== */
 
-function searchIcon(){
+function searchIcon() {
 
-  let inputSearch = document.getElementById("inputSearch");
+  document.getElementById("inputSearch").focus();
+}
 
-  inputSearch.focus()
+function renderFiltered(list) {
 
+  let mainCenter = document.getElementById('mainCenter');
+  mainCenter.innerHTML = '';
+
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
+
+  list.forEach((todo, index) => {
+    let createdAt = new Date(todo.createdAt);
+
+    let card = document.createElement('div');
+    card.className = 'todoFront_Container_2';
+    card.dataset.created = createdAt;
+
+    card.innerHTML = `
+  <div class="parent_1">
+      <h3>${todo.title}</h3>
+      <small>${timeAgo(createdAt)}</small>
+  </div>
+  <hr>
+  <div class="parent_2">
+      <h4>${todo.author}</h4>
+      <p>${todo.description}</p>
+  </div>
+  <div class="btnBox">
+      <button class="editBtn">Edit</button>
+      <button class="deleteBtn">Delete</button>
+  </div>
+`;
+
+    mainCenter.appendChild(card);
+    
+    /* ========== DELETE ========== */
+    card.querySelector('.deleteBtn').addEventListener('click', () => {
+      let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
+
+      // exact todo dhoondo using createdAt aur email
+      let globalIndex = allTodos.findIndex(
+        t => t.createdAt === todo.createdAt && t.email === currentUser.signUpEmail
+      );
+
+      if (globalIndex !== -1) {
+        allTodos.splice(globalIndex, 1); // delete karo
+        localStorage.setItem('UserValue', JSON.stringify(allTodos));
+
+        // current filtered list ko update karo, purani filter ki tarah
+        renderFiltered(list.filter(t => t.createdAt !== todo.createdAt));
+      }
+    });
+
+    /* ========== EDIT ========== */
+    card.querySelector('.editBtn').addEventListener('click', () => {
+      document.getElementById('createList').style.display = 'block';
+      document.getElementById('title').value = todo.title;
+      document.getElementById('author').value = todo.author;
+      document.getElementById('description').value = todo.description;
+
+      let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
+      editIndex = allTodos.findIndex(
+        t => t.title === todo.title && t.email === currentUser.signUpEmail
+      );
+    });
+
+  });
+}
+
+
+function filterAll() {
+  let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
+
+  let filtered = todos.filter(t => t.email === currentUser.signUpEmail);
+  renderFiltered(filtered);
+
+  toggleFilterMenu(); // <-- hide the filter menu after clicking
+}
+
+function filterNewest() {
+  filterSort("newest");
+  toggleFilterMenu();
+}
+
+function filterOldest() {
+  filterSort("oldest");
+  toggleFilterMenu();
+}
+
+function filterToday() {
+  let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
+  let today = new Date().toDateString();
+
+  let filtered = todos.filter(t =>
+    t.email === currentUser.signUpEmail &&
+    new Date(t.createdAt).toDateString() === today
+  );
+
+  renderFiltered(filtered);
+  toggleFilterMenu();
 }
