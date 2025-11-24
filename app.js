@@ -256,35 +256,46 @@ function searchIcon() {
 
 }
 
-function search() {
+function searchTodos() {
+  
+  let searchText = document.getElementById("inputSearch").value.toLowerCase();
+  let mainCenter = document.getElementById('mainCenter');
 
-  let inputSearch = document.getElementById("inputSearch").value;
+  mainCenter.innerHTML = '';
 
   let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
 
-  for (let i = 0; i < todos.length; i++) {
+  let filtered = todos.filter(todo =>
+    todo.email === currentUser.signUpEmail &&
+    todo.title.toLowerCase().includes(searchText)
+  );
 
+  filtered.forEach(todo => {
+    let createdAt = new Date(todo.createdAt);
 
+    let card = document.createElement('div');
+    card.className = 'todoFront_Container_2';
 
-    if (todos[i].title === inputSearch) {
+    card.innerHTML = `
+        <div class="parent_1">
+            <h3>${todo.title}</h3>
+            <small>${timeAgo(createdAt)}</small>
+        </div>
+        <hr>
+        <div class="parent_2">
+            <h4 class="para_1">${todo.author}</h4>
+            <p class="para_2">${todo.description}</p>
+        </div>
+        <button class="deleteBtn">Delete</button>
+    `;
 
-      console.log(todos[i].title);
-
-      let createdAt = new Date(todos[i].createdAt);
-
-      let card = document.createElement('div');
-      card.className = 'todoFront_Container_2';
-      card.dataset.created = createdAt;
-
-      card.innerHTML
-
-      mainCenter.appendChild(card);
-
-    };
-
-  }
-
+    mainCenter.appendChild(card);
+  });
 }
+
+
+
 
 
 
