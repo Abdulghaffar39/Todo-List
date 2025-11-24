@@ -1,5 +1,3 @@
-/* =============================== TODO APP + AUTH FULL CODE =============================== */
-
 /* =============================== Submit Todo =============================== */
 function submit() {
   let todoText = document.getElementById('text').value;
@@ -71,7 +69,6 @@ function signUp(e) {
 }
 
 /* =============================== Login =============================== */
-
 function login(e) {
   e.preventDefault();
 
@@ -98,17 +95,13 @@ function login(e) {
 }
 
 /* =============================== TodoFront Page =============================== */
-
 function todoFront() {
-
   let currentUserData = JSON.parse(localStorage.getItem('currentUserTodo'));
 
   if (!currentUserData) {
-
     alert("Please login first");
     window.location.href = "Login.html";
     return;
-
   }
 
   let user = currentUserData.validUser;
@@ -117,7 +110,6 @@ function todoFront() {
 }
 
 /* =============================== New Post Modal =============================== */
-
 document.getElementById('newPostBtn').addEventListener('click', () => {
   document.getElementById('createList').style.display = 'block';
 });
@@ -127,9 +119,7 @@ function closeModal() {
 }
 
 /* =============================== Time Ago =============================== */
-
 function timeAgo(date) {
-
   const now = new Date();
   const diff = Math.floor((now - date) / 1000);
 
@@ -143,14 +133,11 @@ function timeAgo(date) {
 
 /* =============================== Create Todo =============================== */
 function create() {
-
-
   let title = document.getElementById('title').value.trim();
   let author = document.getElementById('author').value.trim();
   let description = document.getElementById('description').value.trim();
 
   if (!title || !author || !description) {
-
     alert('Please fill all fields');
     return;
   }
@@ -160,7 +147,6 @@ function create() {
   let createdAt = new Date();
 
   blog_obj.push({
-
     title,
     author,
     description,
@@ -172,23 +158,25 @@ function create() {
 
   closeModal();
   displayTodos();
-
-  title = '';
-  author = '';
-  description = '';
-
 }
 
-/* =============================== Display Todos =============================== */
-function displayTodos() {
+/* =============================== Highlight Function =============================== */
+function highlightText(text, search) {
+  if (!search) return text;
+  let reg = new RegExp(search, "gi");
+  return text.replace(reg, match => `<span class="highlight">${match}</span>`);
+}
 
+/* =============================== Display Todos (FINAL SINGLE VERSION) =============================== */
+function displayTodos() {
   let mainCenter = document.getElementById('mainCenter');
-  mainCenter.innerHTML = ''; // Clear existing cards
+  mainCenter.innerHTML = '';
 
   let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
   let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
 
-  todos.filter(todo => todo.email === currentUser.signUpEmail)
+  todos
+    .filter(todo => todo.email === currentUser.signUpEmail)
     .forEach(todo => {
       let createdAt = new Date(todo.createdAt);
 
@@ -197,70 +185,68 @@ function displayTodos() {
       card.dataset.created = createdAt;
 
       card.innerHTML = `
+        <div class="parent_1">
+            <h3>${todo.title}</h3>
+            <small>${timeAgo(createdAt)}</small>
+        </div>
 
-                <div class="parent_1">
+        <hr />
 
-                    <h3>${todo.title}</h3> 
-                    <small>${timeAgo(createdAt)}</small>
+        <div class="parent_2">
+          <h4 class="para_1">${todo.author}</h4>
+          <p class="para_2">${todo.description}</p>
+        </div>
 
-                </div>
-
-                <hr />
-
-                <div class="parent_2">
-
-                  <h4 class="para_1">${todo.author}</h4>
-                  <p class="para_2">${todo.description}</p>
-
-                </div>
-
-                <button class="deleteBtn">Delete</button>
-
-            `;
+        <div class="btnBox">
+            <button class="editBtn">Edit</button>
+            <button class="deleteBtn">Delete</button>
+        </div>
+      `;
 
       mainCenter.appendChild(card);
 
-      // Delete button
+      /* ========== Delete Button ========== */
       card.querySelector('.deleteBtn').addEventListener('click', () => {
-
         let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
-        let newTodos = allTodos.filter(t => !(t.title === todo.title && t.email === currentUser.signUpEmail));
+        let newTodos = allTodos.filter(t =>
+          !(t.title === todo.title && t.email === currentUser.signUpEmail)
+        );
 
         localStorage.setItem('UserValue', JSON.stringify(newTodos));
-        card.remove();
+        displayTodos();
+      });
 
+      /* ========== Edit Button ========== */
+      card.querySelector('.editBtn').addEventListener('click', () => {
+        document.getElementById('createList').style.display = 'block';
+
+        document.getElementById('title').value = todo.title;
+        document.getElementById('author').value = todo.author;
+        document.getElementById('description').value = todo.description;
+
+        /* Remove old version */
+        let allTodos = JSON.parse(localStorage.getItem('UserValue')) || [];
+        let remaining = allTodos.filter(t =>
+          !(t.title === todo.title && t.email === currentUser.signUpEmail)
+        );
+
+        localStorage.setItem('UserValue', JSON.stringify(remaining));
       });
     });
 }
 
 /* =============================== Update Time Ago Every Minute =============================== */
-
 setInterval(() => {
-
   document.querySelectorAll(".todoFront_Container_2").forEach(card => {
-
     let createdAt = new Date(card.dataset.created);
     card.querySelector('small').textContent = timeAgo(createdAt);
-
   });
-
 }, 60000);
 
-
-
-function searchIcon() {
-
-  let input = document.getElementById("inputSearch");
-
-  input.focus()
-
-}
-
+/* =============================== SEARCH WITH HIGHLIGHT =============================== */
 function searchTodos() {
-  
   let searchText = document.getElementById("inputSearch").value.toLowerCase();
   let mainCenter = document.getElementById('mainCenter');
-
   mainCenter.innerHTML = '';
 
   let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
@@ -279,24 +265,91 @@ function searchTodos() {
 
     card.innerHTML = `
         <div class="parent_1">
-            <h3>${todo.title}</h3>
+            <h3>${highlightText(todo.title, searchText)}</h3>
             <small>${timeAgo(createdAt)}</small>
         </div>
-        <hr>
+
+        <hr />
+
         <div class="parent_2">
-            <h4 class="para_1">${todo.author}</h4>
-            <p class="para_2">${todo.description}</p>
+            <h4>${todo.author}</h4>
+            <p>${highlightText(todo.description, searchText)}</p>
         </div>
-        <button class="deleteBtn">Delete</button>
     `;
 
     mainCenter.appendChild(card);
   });
 }
 
+/* =============================== FILTER =============================== */
+function toggleFilterMenu() {
+  let menu = document.getElementById("filterMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
 
+function filterNewest() {
+  filterSort("newest");
+  toggleFilterMenu();
+}
 
+function filterOldest() {
+  filterSort("oldest");
+  toggleFilterMenu();
+}
 
+function filterToday() {
+  let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
+  let today = new Date().toDateString();
 
+  let filtered = todos.filter(t =>
+    t.email === currentUser.signUpEmail &&
+    new Date(t.createdAt).toDateString() === today
+  );
 
+  renderFiltered(filtered);
+  toggleFilterMenu();
+}
 
+/* =============================== SORT FILTER HELPER =============================== */
+function filterSort(type) {
+  let todos = JSON.parse(localStorage.getItem('UserValue')) || [];
+  let currentUser = JSON.parse(localStorage.getItem('currentUserTodo')).validUser;
+
+  let filtered = todos.filter(t => t.email === currentUser.signUpEmail);
+
+  filtered.sort((a, b) => {
+    return type === "newest"
+      ? new Date(b.createdAt) - new Date(a.createdAt)
+      : new Date(a.createdAt) - new Date(b.createdAt);
+  });
+
+  renderFiltered(filtered);
+}
+
+/* =============================== RENDER FILTERED =============================== */
+function renderFiltered(list) {
+  let mainCenter = document.getElementById('mainCenter');
+  mainCenter.innerHTML = '';
+
+  list.forEach(todo => {
+    let createdAt = new Date(todo.createdAt);
+
+    let card = document.createElement('div');
+    card.className = 'todoFront_Container_2';
+
+    card.innerHTML = `
+      <div class="parent_1">
+          <h3>${todo.title}</h3>
+          <small>${timeAgo(createdAt)}</small>
+      </div>
+      <hr>
+      <div class="parent_2">
+          <h4>${todo.author}</h4>
+          <p>${todo.description}</p>
+      </div>
+    `;
+
+    mainCenter.appendChild(card);
+  });
+}

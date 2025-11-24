@@ -35,17 +35,30 @@
             </div>
 
             <div class="parent_2" onkeyup="searchTodos()">
-                
+
                 <div class="child_1">
-                    
+
                     <input type="text" id="inputSearch" placeholder="Search Title...">
                     <i class="fa-solid fa-magnifying-glass" onclick="searchIcon()"></i>
-                    
+
                 </div>
-                
+
                 <div class="child_2">
 
-                    <i class="fa-solid fa-filter"></i>
+                    
+                    <div class="filterBox">
+                        
+                        <i class="fa-solid fa-filter" onclick="toggleFilterMenu()"></i>
+
+                        <div id="filterMenu" class="filterMenu">
+                            <p onclick="filterNewest()">Newest</p>
+                            <p onclick="filterOldest()">Oldest</p>
+                            <p onclick="filterToday()">Today</p>
+                        </div>
+                        
+                    </div>
+
+
 
                 </div>
             </div>
