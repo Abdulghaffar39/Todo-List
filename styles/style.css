@@ -896,16 +896,23 @@ body {
 }
 
 /* =============================== Header Section =============================== */
-.todoFront_Container_1 {
+.homne_Container_1 {
 
+    width: 100%;
+    
     padding: 20px;
     color: black;
     border-radius: 10px;
     margin-bottom: 20px;
     background-color: #5471b8;
-
+    
     display: flex;
     justify-content: space-between;
+
+    /* position: fixed;
+    top: 20px; */
+
+    z-index: 3000;
 }
 
 .parent_1 {
@@ -1037,7 +1044,7 @@ body {
 
 }
 
-.todoFront_Container_2 {
+.homne_Container_2 {
 
     padding: 20px;
     color: black;
@@ -1051,7 +1058,7 @@ body {
     justify-content: space-between;
 }
 
-.todoFront_Container_2 .parent_1 {
+.homne_Container_2 .parent_1 {
 
     overflow: hidden;
 
@@ -1062,7 +1069,7 @@ body {
 
 }
 
-.todoFront_Container_2 .parent_1 h3 {
+.homne_Container_2 .parent_1 h3 {
 
     margin: 0;
     line-height: 40px;
@@ -1072,12 +1079,12 @@ body {
     font-weight: 800;
 }
 
-.todoFront_Container_2 .parent_1 small {
+.homne_Container_2 .parent_1 small {
 
     color: green;
 }
 
-.todoFront_Container_2 .parent_2 {
+.homne_Container_2 .parent_2 {
 
     width: 100%;
     overflow: hidden;
@@ -1089,7 +1096,7 @@ body {
     gap: 20px;
 }
 
-.todoFront_Container_2 .parent_2 h4 {
+.homne_Container_2 .parent_2 h4 {
 
     font-size: 28px;
     font-weight: 600;
@@ -1097,7 +1104,7 @@ body {
     border-radius: 10px;
 }
 
-.todoFront_Container_2 .parent_2 p {
+.homne_Container_2 .parent_2 p {
 
     font-size: 18px;
     color: gray;
@@ -1136,7 +1143,7 @@ body {
 
 /* =============================== New Post Button =============================== */
 
-.todoFront_Container_3 {
+.homne_Container_3 {
 
     position: fixed;
     left: 47.9%;
@@ -1323,12 +1330,12 @@ body {
         font-size: 24px;
     }
 
-    .todoFront_Container_2 h3 {
+    .homne_Container_2 h3 {
 
         font-size: 20px;
     }
 
-    .todoFront_Container_2 p {
+    .homne_Container_2 p {
 
         font-size: 14px;
     }
@@ -1340,13 +1347,13 @@ body {
     }
 
 
-    .todoFront_Container_2 .parent_1 h3 {
+    .homne_Container_2 .parent_1 h3 {
 
         width: 100%;
         justify-content: start;
     }
 
-    .todoFront_Container_2 .parent_1 small {
+    .homne_Container_2 .parent_1 small {
 
         width: 100%;
         display: flex;

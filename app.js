@@ -94,11 +94,11 @@ function login(e) {
   alert('Logged in successfully!');
   localStorage.setItem('currentUserTodo', JSON.stringify({ validUser: user }));
   document.getElementById("loginForm").reset();
-  window.location.href = 'todoFront.html';
+  window.location.href = 'home.html';
 }
 
-/* =============================== TodoFront Page =============================== */
-function todoFront() {
+/* =============================== home Page =============================== */
+function home() {
   let currentUserData = JSON.parse(localStorage.getItem('currentUserTodo'));
 
   if (!currentUserData) {
@@ -201,7 +201,7 @@ function displayTodos() {
       let createdAt = new Date(todo.createdAt);
 
       let card = document.createElement('div');
-      card.className = 'todoFront_Container_2';
+      card.className = 'home_Container_2';
       card.dataset.created = createdAt;
 
       card.innerHTML = `
@@ -252,7 +252,7 @@ function displayTodos() {
 
 /* =============================== TimeAgo Auto Update =============================== */
 setInterval(() => {
-  document.querySelectorAll(".todoFront_Container_2").forEach(card => {
+  document.querySelectorAll(".home_Container_2").forEach(card => {
     let createdAt = new Date(card.dataset.created);
     card.querySelector('small').textContent = timeAgo(createdAt);
   });
@@ -276,7 +276,7 @@ function searchTodos() {
     let createdAt = new Date(todo.createdAt);
 
     let card = document.createElement('div');
-    card.className = 'todoFront_Container_2';
+    card.className = 'home_Container_2';
 
     card.innerHTML = `
         <div class="parent_1">
@@ -361,7 +361,7 @@ function renderFiltered(list) {
     let createdAt = new Date(todo.createdAt);
 
     let card = document.createElement('div');
-    card.className = 'todoFront_Container_2';
+    card.className = 'home_Container_2';
 
     card.innerHTML = `
       <div class="parent_1">
@@ -397,7 +397,7 @@ function renderFiltered(list) {
     let createdAt = new Date(todo.createdAt);
 
     let card = document.createElement('div');
-    card.className = 'todoFront_Container_2';
+    card.className = 'home_Container_2';
     card.dataset.created = createdAt;
 
     card.innerHTML = `
